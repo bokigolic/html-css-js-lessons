@@ -4,38 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>What is HTML?</title>
 </head>
 
 <body>
-  <h2>HTML - Introduction</h2>
-  <p>HTML (HyperText Markup Language) je osnovni jezik za kreiranje web stranica. On opisuje strukturu stranice
-    koristeći
-    oznake, tj. <em>tagove</em>.</p>
+  <!DOCTYPE html>
+  <html lang="en">
 
-  <p>HTML dokumenti su zapravo obični tekstualni fajlovi sa ekstenzijom <code>.html</code> i sastoje se od elemenata
-    koji
-    govore browseru kako da prikaže sadržaj.</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
 
-  <ul>
-    <li><code>&lt;h1&gt;</code> do <code>&lt;h6&gt;</code> – Naslovi</li>
-    <li><code>&lt;p&gt;</code> – Paragrafi</li>
-    <li><code>&lt;a&gt;</code> – Linkovi</li>
-    <li><code>&lt;img&gt;</code> – Slike</li>
-  </ul>
+  <body>
+    <section>
+      <h1>🔤 What is HTML?</h1>
 
-  <p>Svaka HTML stranica obično sadrži sledeću strukturu:</p>
+      <p><strong>HTML</strong> stands for <em>HyperText Markup Language</em>. It’s the basic building block of every web
+        page on the internet.</p>
 
-  <pre><code>&lt;!DOCTYPE html&gt;
+      <ul>
+        <li>It defines the structure of web content.</li>
+        <li>Uses <strong>elements</strong> (called <em>tags</em>) to tell the browser how to display content.</li>
+        <li>Examples: headings, paragraphs, links, images, videos, and more.</li>
+      </ul>
+
+      <h2>📄 Basic HTML Page Example</h2>
+      <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
-    &lt;title&gt;My First Page&lt;/title&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
   &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
+
+      <h2>🧠 Explanation of the Code</h2>
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> — tells the browser this is an HTML5 document</li>
+        <li><code>&lt;html&gt;</code> — the root of the web page</li>
+        <li><code>&lt;head&gt;</code> — contains metadata like the page’s title</li>
+        <li><code>&lt;title&gt;</code> — sets the name shown in the browser tab</li>
+        <li><code>&lt;body&gt;</code> — holds all visible content</li>
+        <li><code>&lt;h1&gt;</code> — defines a heading (important text)</li>
+        <li><code>&lt;p&gt;</code> — defines a paragraph</li>
+      </ul>
+
+      <h2>🧩 What is an HTML Element?</h2>
+      <p>An HTML element consists of a <strong>start tag</strong>, <strong>content</strong>, and an <strong>end
+          tag</strong>.</p>
+
+      <pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt>This is a paragraph.&lt;/p&gt;</code></pre>
+
+      <p>Some elements are <strong>empty</strong>, meaning they don’t have content or an end tag (e.g.,
+        <code>&lt;br&gt;</code> for line break).
+      </p>
+
+      <h2>🌐 How Browsers Read HTML</h2>
+      <p>Web browsers like Chrome, Firefox, Safari, or Edge <strong>don’t show HTML tags</strong>. Instead, they use the
+        tags to format and display the content properly on screen.</p>
+
+      <h2>🧱 Visual Structure of an HTML Page</h2>
+      <pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;This is a heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+    &lt;p&gt;This is another paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+      <p>👉 Everything inside <code>&lt;body&gt;</code> shows up on the page. The content of <code>&lt;title&gt;</code>
+        appears in the browser’s tab.</p>
+
+      <h2>📚 Brief History of HTML</h2>
+      <ul>
+        <li><strong>1989</strong> — Tim Berners-Lee invents the World Wide Web</li>
+        <li><strong>1991</strong> — First version of HTML is born</li>
+        <li><strong>1995</strong> — HTML 2.0 released</li>
+        <li><strong>1999</strong> — HTML 4.01 becomes standard</li>
+        <li><strong>2008+</strong> — HTML5 begins and becomes the modern standard</li>
+      </ul>
+
+      <p>Today, HTML5 is what we use to build modern websites with multimedia, responsive design, and cleaner structure.
+      </p>
+    </section>
+
+
+  </body>
+
+  </html>
 </body>
 
 </html>

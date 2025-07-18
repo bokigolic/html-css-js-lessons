@@ -8,14 +8,84 @@
 </head>
 
 <body>
-  <h2>HTML Attributes</h2>
-  <p>HTML atributi daju dodatne informacije o elementima.</p>
+  <section>
+    <h1>📘 HTML Basic Examples</h1>
 
-  <p>Najčešći atribut je <code>href</code> kod linkova:</p>
-  <pre><code>&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</code></pre>
+    <p>In this chapter, we’ll walk through the most common and essential building blocks of an HTML page. Don't worry if
+      some tags are new — everything will make sense step by step.</p>
 
-  <p>Drugi primer – atribut <code>src</code> kod slike:</p>
-  <pre><code>&lt;img src="image.jpg" alt="Opis slike"&gt;</code></pre>
+    <h2>📄 HTML Document Structure</h2>
+    <p>Every HTML file starts with a declaration that tells the browser: “Hey, I’m writing HTML5!”</p>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;My First Heading&lt;/h1&gt;
+    &lt;p&gt;My first paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <ul>
+      <li><strong><code>&lt;!DOCTYPE html&gt;</code></strong> – Tells the browser you're using HTML5.</li>
+      <li><strong><code>&lt;html&gt; ... &lt;/html&gt;</code></strong> – Wraps the whole page.</li>
+      <li><strong><code>&lt;body&gt; ... &lt;/body&gt;</code></strong> – Contains everything visible on the page.</li>
+    </ul>
+
+    <h2>🏷️ Headings</h2>
+    <p>Headings define titles and subtitles. There are six levels:</p>
+
+    <pre><code>&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;</code></pre>
+
+    <p><strong><code>&lt;h1&gt;</code></strong> is the biggest and most important, while
+      <strong><code>&lt;h6&gt;</code></strong> is the smallest.</p>
+
+    <h2>📑 Paragraphs</h2>
+    <p>Paragraphs are wrapped in the <code>&lt;p&gt;</code> tag:</p>
+
+    <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
+
+    <h2>🔗 Links</h2>
+    <p>Links are created using the <code>&lt;a&gt;</code> tag and require the <code>href</code> attribute:</p>
+
+    <pre><code>&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;</code></pre>
+
+    <p>The <code>href</code> defines the URL that the link goes to.</p>
+
+    <h2>🖼️ Images</h2>
+    <p>To show an image, use the <code>&lt;img&gt;</code> tag with some helpful attributes:</p>
+
+    <pre><code>&lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;</code></pre>
+
+    <ul>
+      <li><code>src</code> – The image path or URL.</li>
+      <li><code>alt</code> – Describes the image if it can’t load or for screen readers.</li>
+      <li><code>width</code> & <code>height</code> – Controls the image size.</li>
+    </ul>
+
+    <h2>👀 How to View HTML Code in the Browser</h2>
+
+    <h3>1. View Page Source</h3>
+    <p>To see the raw HTML of any page:</p>
+    <ul>
+      <li>Windows: Press <kbd>CTRL + U</kbd></li>
+      <li>Mac: Press <kbd>Command + Option + U</kbd></li>
+      <li>Or right-click anywhere on the page and select <strong>"View Page Source"</strong>.</li>
+    </ul>
+
+    <h3>2. Inspect Elements</h3>
+    <p>Want to peek into how something is built?</p>
+    <ul>
+      <li>Right-click on any element and choose <strong>“Inspect”</strong>.</li>
+      <li>You’ll see both the HTML and the CSS!</li>
+      <li>You can even experiment by editing code directly in the panel.</li>
+    </ul>
+
+    <p>🎉 Now that you've learned the basics, you're one step closer to becoming an HTML pro!</p>
+  </section>
+
 
 </body>
 
