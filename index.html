@@ -4,22 +4,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn JavaScript</title>
+  <title>Learn Frontend - HTML, CSS, JS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="app">
-    <aside class="sidebar" id="sidebar">
-      <!-- Lekcije će se dinamički ubaciti ovde -->
-    </aside>
-    <main class="content" id="content">
-      <h2>Welcome!</h2>
-      <p>Select a lesson to begin.</p>
-    </main>
-  </div>
 
-  <script src="script.js"></script>
+  <aside class="sidebar">
+    <h2>Lessons</h2>
+    <ul id="menu">
+      <li data-section="html">Learn HTML</li>
+      <li data-section="css">Learn CSS</li>
+      <li data-section="js">Learn JavaScript</li>
+    </ul>
+  </aside>
+
+  <main class="content" id="content">
+    <h1>Welcome to Learn Frontend</h1>
+    <p>Select a lesson from the sidebar to begin.</p>
+  </main>
+
+
+  <script src="app.js"></script>
 </body>
 
 </html>
