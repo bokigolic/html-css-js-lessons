@@ -22,5 +22,6 @@ lessons.forEach((lesson) => {
     btn.classList.add("active");
   });
 
+
   sidebar.appendChild(btn);
 });
