@@ -2,91 +2,120 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML for beginners - Lesson 3: Elements and Attributes" />
+  <title>Lesson 3: HTML Elements and Attributes</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../app.js"></script>
 </head>
 
 <body>
-  <section>
-    <h1>📘 HTML Basic Examples</h1>
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 3: Elements and Attributes</h2>
+  </header>
 
-    <p>In this chapter, we’ll walk through the most common and essential building blocks of an HTML page. Don't worry if
-      some tags are new — everything will make sense step by step.</p>
+  <main>
+    <section class="lesson-intro">
+      <h3>HTML Elements – The Core Building Blocks</h3>
+      <p>
+        In HTML, an <strong>element</strong> is everything from the opening tag to the closing tag. Elements define the
+        structure and content of your page. Almost everything in HTML is an element.
+      </p>
+      <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+      <p>Here, <code>&lt;p&gt;</code> is the element. It starts with an opening tag, contains content, and ends with a
+        closing tag.</p>
 
-    <h2>📄 HTML Document Structure</h2>
-    <p>Every HTML file starts with a declaration that tells the browser: “Hey, I’m writing HTML5!”</p>
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Not all elements have a closing tag! Some are <em>self-closing</em>, like
+        <code>&lt;br&gt;</code> or <code>&lt;img&gt;</code>.
+      </div>
+    </section>
 
-    <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    <section class="nested-elements">
+      <h3>📦 Nested Elements</h3>
+      <p>HTML elements can be placed inside other elements. This is called <strong>nesting</strong>.</p>
+      <pre><code>&lt;div&gt;
+  &lt;h2&gt;Title&lt;/h2&gt;
+  &lt;p&gt;This is a &lt;strong&gt;nested&lt;/strong&gt; paragraph.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      <p>The <code>&lt;strong&gt;</code> tag is nested inside the <code>&lt;p&gt;</code> tag, which is inside the
+        <code>&lt;div&gt;</code>.
+      </p>
+      <div class="note-box">
+        <strong>⚠️ Rule:</strong> Always properly close and nest your tags to avoid rendering issues.
+      </div>
+    </section>
 
-    <ul>
-      <li><strong><code>&lt;!DOCTYPE html&gt;</code></strong> – Tells the browser you're using HTML5.</li>
-      <li><strong><code>&lt;html&gt; ... &lt;/html&gt;</code></strong> – Wraps the whole page.</li>
-      <li><strong><code>&lt;body&gt; ... &lt;/body&gt;</code></strong> – Contains everything visible on the page.</li>
-    </ul>
+    <section class="attributes-intro">
+      <h3>🔑 What Are Attributes?</h3>
+      <p>
+        Attributes provide extra information about an element. They're always included in the opening tag and usually
+        come in name="value" pairs.
+      </p>
+      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code></pre>
+      <ul>
+        <li><code>href</code> – specifies the link URL</li>
+        <li><code>target</code> – determines how the link opens (e.g. new tab)</li>
+      </ul>
+    </section>
 
-    <h2>🏷️ Headings</h2>
-    <p>Headings define titles and subtitles. There are six levels:</p>
+    <section class="global-attributes">
+      <h3>🌐 Global Attributes</h3>
+      <p>These attributes can be used on almost any HTML element:</p>
+      <ul>
+        <li><code>id</code> – Unique identifier for an element</li>
+        <li><code>class</code> – Category name used in CSS or JavaScript</li>
+        <li><code>style</code> – Inline styling (e.g. <code>style="color:red"</code>)</li>
+        <li><code>title</code> – Tooltip text shown on hover</li>
+      </ul>
+      <div class="example-box">
+        <pre><code>&lt;p id="intro" class="highlight" style="color:blue" title="Intro paragraph"&gt;
+  Welcome to my page!
+&lt;/p&gt;</code></pre>
+      </div>
+    </section>
 
-    <pre><code>&lt;h1&gt;This is heading 1&lt;/h1&gt;
-&lt;h2&gt;This is heading 2&lt;/h2&gt;
-&lt;h3&gt;This is heading 3&lt;/h3&gt;</code></pre>
+    <section class="activity">
+      <h3>🧪 Practice Activity</h3>
+      <p>Write an HTML snippet that uses:</p>
+      <ul>
+        <li>an <code>&lt;img&gt;</code> tag with <code>src</code> and <code>alt</code></li>
+        <li>a <code>&lt;p&gt;</code> with <code>class</code> and <code>title</code></li>
+      </ul>
+      <pre><code>&lt;img src="cat.jpg" alt="A cute cat looking curious"&gt;
+&lt;p class="caption" title="Cat photo description"&gt;Meet my cat Miso!&lt;/p&gt;</code></pre>
+    </section>
 
-    <p><strong><code>&lt;h1&gt;</code></strong> is the biggest and most important, while
-      <strong><code>&lt;h6&gt;</code></strong> is the smallest.</p>
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML elements define structure. They usually have an opening and closing tag.</li>
+        <li>Elements can be nested to organize content.</li>
+        <li>Attributes provide extra data and control behavior or styling.</li>
+        <li>Global attributes like <code>id</code>, <code>class</code>, and <code>title</code> can be used across
+          elements.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Create a mini card component with <code>div</code>, <code>h3</code>,
+        <code>p</code>, and <code>img</code> using proper nesting and attributes.
+      </div>
+    </section>
 
-    <h2>📑 Paragraphs</h2>
-    <p>Paragraphs are wrapped in the <code>&lt;p&gt;</code> tag:</p>
+    <section class="lesson-next">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 4</strong>, we’ll dive into creating links and building navigation with the
+        <code>&lt;a&gt;</code> tag and anchors.
+      </p>
+      <a href="lesson4.html">➡️ Next Lesson</a>
+      <a href="../index.html">⬅️ Back to Home</a>
+    </section>
+  </main>
 
-    <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;p&gt;This is another paragraph.&lt;/p&gt;</code></pre>
-
-    <h2>🔗 Links</h2>
-    <p>Links are created using the <code>&lt;a&gt;</code> tag and require the <code>href</code> attribute:</p>
-
-    <pre><code>&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;</code></pre>
-
-    <p>The <code>href</code> defines the URL that the link goes to.</p>
-
-    <h2>🖼️ Images</h2>
-    <p>To show an image, use the <code>&lt;img&gt;</code> tag with some helpful attributes:</p>
-
-    <pre><code>&lt;img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142"&gt;</code></pre>
-
-    <ul>
-      <li><code>src</code> – The image path or URL.</li>
-      <li><code>alt</code> – Describes the image if it can’t load or for screen readers.</li>
-      <li><code>width</code> & <code>height</code> – Controls the image size.</li>
-    </ul>
-
-    <h2>👀 How to View HTML Code in the Browser</h2>
-
-    <h3>1. View Page Source</h3>
-    <p>To see the raw HTML of any page:</p>
-    <ul>
-      <li>Windows: Press <kbd>CTRL + U</kbd></li>
-      <li>Mac: Press <kbd>Command + Option + U</kbd></li>
-      <li>Or right-click anywhere on the page and select <strong>"View Page Source"</strong>.</li>
-    </ul>
-
-    <h3>2. Inspect Elements</h3>
-    <p>Want to peek into how something is built?</p>
-    <ul>
-      <li>Right-click on any element and choose <strong>“Inspect”</strong>.</li>
-      <li>You’ll see both the HTML and the CSS!</li>
-      <li>You can even experiment by editing code directly in the panel.</li>
-    </ul>
-
-    <p>🎉 Now that you've learned the basics, you're one step closer to becoming an HTML pro!</p>
-  </section>
-
-
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
 </body>
 
 </html>

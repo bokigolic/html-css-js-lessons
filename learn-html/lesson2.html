@@ -2,85 +2,131 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Editors</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML for beginners - Lesson 2: Text Formatting" />
+  <title>Lesson 2: Text Formatting</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../app.js"></script>
 </head>
 
 <body>
-  <section>
-    <h1>🛠️ HTML Editors</h1>
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 2: Text Formatting</h2>
+  </header>
 
-    <p>To create a webpage, all you really need is a simple text editor. Yes — that’s it!</p>
+  <main>
+    <section class="lesson-intro">
+      <h3>Why Text Formatting Matters</h3>
+      <p>
+        Text formatting in HTML allows you to emphasize important content, improve readability, and structure your text
+        for better user experience. Imagine a page where everything is plain text — it would be hard to scan and boring
+        to read. That’s where formatting tags shine!
+      </p>
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Use formatting tags sparingly and meaningfully to highlight what truly matters.
+      </div>
+    </section>
 
-    <p>While there are many professional tools out there (like VS Code, Sublime Text, or Atom), we recommend starting
-      with basic editors like:</p>
-    <ul>
-      <li><strong>Notepad</strong> (for Windows users)</li>
-      <li><strong>TextEdit</strong> (for Mac users)</li>
-    </ul>
+    <section class="basic-tags">
+      <h3>📝 Common Formatting Tags</h3>
+      <ul>
+        <li><code>&lt;b&gt;</code> – Bold (purely visual)</li>
+        <li><code>&lt;strong&gt;</code> – Important text (semantically meaningful + bold)</li>
+        <li><code>&lt;i&gt;</code> – Italic (visual)</li>
+        <li><code>&lt;em&gt;</code> – Emphasized text (semantic + italic)</li>
+        <li><code>&lt;u&gt;</code> – Underlined text</li>
+        <li><code>&lt;sup&gt;</code> – Superscript (e.g., x<sup>2</sup>)</li>
+        <li><code>&lt;sub&gt;</code> – Subscript (e.g., H<sub>2</sub>O)</li>
+      </ul>
 
-    <p>Why? Because using a simple tool helps you focus on the structure of HTML without getting distracted by extra
-      features.</p>
+      <div class="example-box">
+        <strong>Example:</strong>
+        <pre><code>&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt;, and &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;
+&lt;p&gt;Use &lt;strong&gt;strong&lt;/strong&gt; and &lt;em&gt;emphasis&lt;/em&gt; to convey importance.&lt;/p&gt;
+&lt;p&gt;Chemical formula: H&lt;sub&gt;2&lt;/sub&gt;O | Math: x&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+      </div>
+    </section>
 
-    <h2>💻 Getting Started with Notepad (Windows)</h2>
-    <ol>
-      <li>Click the <strong>Start</strong> button or press the <kbd>Windows</kbd> key.</li>
-      <li>Type <strong>Notepad</strong> and open it.</li>
-      <li>You're ready to write HTML!</li>
-    </ol>
+    <section class="line-breaks">
+      <h3>📏 Line Breaks and Horizontal Rules</h3>
+      <p>HTML provides special tags to help you separate or break up your text:</p>
+      <ul>
+        <li><code>&lt;br&gt;</code> – Line break (like pressing Enter once)</li>
+        <li><code>&lt;hr&gt;</code> – Horizontal rule (a dividing line)</li>
+      </ul>
+      <div class="example-box">
+        <pre><code>&lt;p&gt;Line one&lt;br&gt;Line two&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;After the horizontal line.&lt;/p&gt;</code></pre>
+      </div>
+    </section>
 
-    <h2>🍏 Getting Started with TextEdit (Mac)</h2>
-    <ol>
-      <li>Open <strong>Finder &gt; Applications &gt; TextEdit</strong>.</li>
-      <li>Go to <strong>Preferences</strong>.</li>
-      <li>Set <strong>Format</strong> to <em>Plain Text</em>.</li>
-      <li>In the <strong>Open and Save</strong> section, check:
-        <br><code>Display HTML files as HTML code instead of formatted text</code>.
-      </li>
-      <li>Now open a new file — you're ready!</li>
-    </ol>
+    <section class="semantic-difference">
+      <h3>🎯 Semantic vs. Visual Formatting</h3>
+      <p>
+        There are two types of formatting tags:
+        <strong>semantic</strong> (carry meaning) and <strong>visual</strong> (only change appearance).
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Visual</th>
+            <th>Semantic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;b&gt;</code></td>
+            <td><code>&lt;strong&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;i&gt;</code></td>
+            <td><code>&lt;em&gt;</code></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Use semantic tags when possible. They help search engines, screen readers, and developers understand the purpose
+        of the content.
+      </p>
+    </section>
 
-    <h2>✍️ Step 2: Write Some HTML</h2>
-    <p>Type or copy this code into your editor:</p>
+    <section class="fun-activity">
+      <h3>🧠 Try It Yourself</h3>
+      <p>Create your own mini resume using formatting tags:</p>
+      <pre><code>&lt;h1&gt;Jane Doe&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Web Developer&lt;/strong&gt; with a passion for &lt;em&gt;clean code&lt;/em&gt; and &lt;u&gt;user experience&lt;/u&gt;.&lt;/p&gt;
+&lt;p&gt;Favorite formula: E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+    </section>
 
-    <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;My First Heading&lt;/h1&gt;
-    &lt;p&gt;My first paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> for simple bold and italics.</li>
+        <li>Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> for meaningful emphasis.</li>
+        <li>Use <code>&lt;sup&gt;</code> and <code>&lt;sub&gt;</code> for formulas and notes.</li>
+        <li>Use <code>&lt;br&gt;</code> and <code>&lt;hr&gt;</code> for spacing and separation.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini-Challenge:</strong> Write a motivational quote and highlight key words with
+        <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code>.
+      </div>
+    </section>
 
-    <h2>💾 Step 3: Save the File</h2>
-    <ul>
-      <li>Go to <strong>File &gt; Save As</strong>.</li>
-      <li>Save the file as <code>index.html</code> or <code>index.htm</code>.</li>
-      <li>Set encoding to <strong>UTF-8</strong> (this is best for HTML).</li>
-    </ul>
+    <section class="lesson-next">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 3</strong>, we’ll look at HTML elements and attributes — the building blocks of any web page!
+      </p>
+      <a href="lesson3.html">➡️ Next Lesson</a>
+      <a href="../index.html">⬅️ Back to Home</a>
+    </section>
+  </main>
 
-    <h2>🌐 Step 4: View It in a Browser</h2>
-    <p>Just double-click the saved file or right-click and choose <em>"Open with"</em> &rarr; Your Browser.</p>
-    <p>You’ll see your very first HTML page!</p>
-
-    <h2>🧪 Try HTML Code Online</h2>
-    <p>Want to test HTML without creating files? Try an online editor like W3Schools or CodePen.</p>
-    <p>These editors let you experiment instantly and are perfect for quick learning and sharing.</p>
-
-    <h3>Example:</h3>
-    <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;This is a Heading&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-  </section>
-
-
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
 </body>
 
 </html>

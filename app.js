@@ -1,76 +1,64 @@
-const menu = document.getElementById("menu");
-const content = document.getElementById("content");
+// app.js
 
-const lessons = {
-  html: [
-    { title: "🔤 What is HTML?", page: "learn-html/lesson1.html" },
-    { title: "🛠️ HTML Editors", page: "learn-html/lesson2.html" },
-    { title: "📘 HTML Basic Examples", page: "learn-html/lesson3.html" },
-    { title: "🔤 HTML Elements", page: "learn-html/lesson4.html" },
-    { title: "📁 HTML Page Structure", page: "learn-html/lesson5.html" },
-    { title: "📜 HTML History", page: "learn-html/lesson6.html" }
-  ],
-  css: [
-    { title: "🎨 CSS Basics", page: "learn-css/lesson1.html" },
-    { title: "🔍 Selectors", page: "learn-css/lesson2.html" }
-  ],
-  js: [
-    { title: "📜 JavaScript Intro", page: "learn-js/lesson1.html" },
-    { title: "🔢 Variables", page: "learn-js/lesson2.html" }
-  ]
-};
+document.addEventListener("DOMContentLoaded", () => {
+  const main = document.querySelector("main");
+  const loader = document.getElementById("loader");
 
-let currentSection = null;
+  setTimeout(() => {
+    loader.style.display = "none";
+    fadeIn(main);
+  }, 1000); // simulate loading delay
 
-menu.addEventListener("click", (e) => {
-  const target = e.target;
-  if (target.tagName === "LI" && target.dataset.section) {
-    const section = target.dataset.section;
-    currentSection = section;
-    showLessonList(section);
-  }
+  // Page transition
+  document.querySelectorAll("a[href]").forEach(link => {
+    if (!link.classList.contains("next-button")) return;
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = this.getAttribute("href");
+      fadeOut(main, () => window.location.href = href);
+    });
+  });
+
+  // 3D hover effect
+  document.querySelectorAll(".next-button").forEach(card => {
+    card.addEventListener("mousemove", e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const rotateY = ((x / rect.width) - 0.5) * 20;
+      const rotateX = ((y / rect.height) - 0.5) * -20;
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateX(0) rotateY(0)";
+    });
+  });
 });
 
-function showLessonList(section) {
-  menu.innerHTML = "";
+function fadeOut(el, callback) {
+  el.style.opacity = 1;
+  el.style.transition = "opacity 0.4s ease";
+  el.style.opacity = 0;
+  setTimeout(callback, 400);
+}
 
-  const back = document.createElement("li");
-  back.textContent = "⬅ Back";
-  back.style.fontWeight = "bold";
-  back.addEventListener("click", () => location.reload());
-  menu.appendChild(back);
+function fadeIn(el) {
+  el.style.opacity = 0;
+  el.style.transition = "opacity 0.6s ease";
+  setTimeout(() => {
+    el.style.opacity = 1;
+  }, 50);
+}
 
-  if (!lessons[section] || lessons[section].length === 0) {
-    content.innerHTML = "<p>No lessons found for this section.</p>";
-    return;
+window.onload = function () {
+  const main = document.querySelector("main");
+  if (main) {
+    main.style.opacity = 1;
   }
 
-  lessons[section].forEach((lesson) => {
-    const li = document.createElement("li");
-    li.textContent = lesson.title;
-    li.dataset.page = lesson.page;
-
-    li.addEventListener("click", async () => {
-      highlightActive(li);
-      content.innerHTML = "<p>Loading...</p>";
-      try {
-        const res = await fetch(lesson.page);
-        if (!res.ok) throw new Error("Network error");
-        const html = await res.text();
-        content.innerHTML = html;
-      } catch (err) {
-        content.innerHTML = `<p>Failed to load content. <button onclick=\"location.reload()\">Reload</button></p>`;
-        console.error(err);
-      }
-    });
-
-    menu.appendChild(li);
-  });
-}
-
-function highlightActive(clickedLi) {
-  document.querySelectorAll(".sidebar li").forEach((el) => el.classList.remove("active"));
-  clickedLi.classList.add("active");
-}
-
-// Optional: Restore scroll position or add localStorage logic here
+  // Ako koristiš loader
+  const loader = document.getElementById("loader");
+  if (loader) {
+    loader.style.display = "none";
+  }
+};

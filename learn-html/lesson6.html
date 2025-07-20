@@ -2,26 +2,121 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML for beginners - Lesson 6: HTML Lists" />
+  <title>Lesson 6: HTML Lists</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../app.js"></script>
 </head>
 
 <body>
-  <h2>HTML Links</h2>
-  <p>Linkovi se kreiraju pomoću <code>&lt;a&gt;</code> taga i <code>href</code> atributa.</p>
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 6: HTML Lists</h2>
+  </header>
 
-  <pre><code>&lt;a href="https://google.com"&gt;Idi na Google&lt;/a&gt;</code></pre>
+  <main>
+    <section class="lesson-intro">
+      <h3>📋 Why Use Lists?</h3>
+      <p>Lists help organize content. You can use them for menus, steps, features, definitions, and more. HTML supports
+        several types of lists to suit different needs.</p>
+    </section>
 
-  <p>Link može da vodi:</p>
-  <ul>
-    <li>Na drugu stranicu</li>
-    <li>Na istu stranicu (anchor)</li>
-    <li>Na dokument za preuzimanje</li>
-  </ul>
+    <section class="unordered-list">
+      <h3>🔹 Unordered List – <code>&lt;ul&gt;</code></h3>
+      <p>Used for lists without a specific order (e.g. shopping list):</p>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Bananas&lt;/li&gt;
+  &lt;li&gt;Cherries&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </section>
 
+    <section class="ordered-list">
+      <h3>🔸 Ordered List – <code>&lt;ol&gt;</code></h3>
+      <p>Used when order matters (e.g. recipe steps):</p>
+      <pre><code>&lt;ol&gt;
+  &lt;li&gt;Preheat oven&lt;/li&gt;
+  &lt;li&gt;Mix ingredients&lt;/li&gt;
+  &lt;li&gt;Bake for 30 minutes&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </section>
 
+    <section class="list-style-tip">
+      <h3>🎨 Styling Lists</h3>
+      <p>You can change the look with CSS:</p>
+      <pre><code>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: upper-roman;
+}</code></pre>
+    </section>
 
+    <section class="nested-lists">
+      <h3>📦 Nested Lists</h3>
+      <p>You can nest one list inside another for sub-items:</p>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Fruits
+    &lt;ul&gt;
+      &lt;li&gt;Apples&lt;/li&gt;
+      &lt;li&gt;Bananas&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </section>
+
+    <section class="description-lists">
+      <h3>📖 Description List – <code>&lt;dl&gt;</code></h3>
+      <p>Used for terms and definitions (like a glossary):</p>
+      <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+    </section>
+
+    <section class="practice-section">
+      <h3>🧠 Practice Activity</h3>
+      <p>Create a weekly to-do list with:</p>
+      <ul>
+        <li><code>&lt;ol&gt;</code> for weekday tasks</li>
+        <li><code>&lt;ul&gt;</code> for weekend fun</li>
+        <li><code>&lt;dl&gt;</code> for short glossary</li>
+      </ul>
+    </section>
+
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;ul&gt;</code> – unordered (bulleted) list</li>
+        <li><code>&lt;ol&gt;</code> – ordered (numbered) list</li>
+        <li><code>&lt;li&gt;</code> – list item inside ul/ol</li>
+        <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code> – description list</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Create a recipe card using an ordered list for steps and an unordered list for
+        ingredients.
+      </div>
+    </section>
+
+    <section class="lesson-next">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 7</strong>, we’ll learn how to create tables with <code>&lt;table&gt;</code>,
+        <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code>, and more!
+      </p>
+      <a href="lesson7.html">➡️ Next Lesson</a>
+      <a href="../index.html">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
 </body>
 
 </html>

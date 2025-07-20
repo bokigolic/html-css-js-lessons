@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML for beginners - Lesson 8: Forms" />
+  <title>Lesson 8: HTML Forms</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../app.js"></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 8: HTML Forms</h2>
+  </header>
+
+  <main>
+    <section class="lesson-intro">
+      <h3>📨 What Are Forms?</h3>
+      <p>Forms are used to collect user input: login credentials, comments, survey answers, and more. They are essential
+        for interactivity on the web.</p>
+    </section>
+
+    <section class="form-basic">
+      <h3>🧾 Basic Form Structure</h3>
+      <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+
+    <section class="input-types">
+      <h3>🔢 Common Input Types</h3>
+      <ul>
+        <li><code>text</code> – single-line input</li>
+        <li><code>password</code> – hides typed text</li>
+        <li><code>email</code> – validates email format</li>
+        <li><code>checkbox</code> – multiple selections</li>
+        <li><code>radio</code> – single choice from a group</li>
+        <li><code>submit</code> – submit the form</li>
+      </ul>
+
+      <pre><code>&lt;input type="text" name="username" /&gt;
+&lt;input type="password" name="pwd" /&gt;
+&lt;input type="email" name="email" /&gt;
+&lt;input type="checkbox" name="subscribe" /&gt;
+&lt;input type="radio" name="gender" value="male" /&gt; Male
+&lt;input type="radio" name="gender" value="female" /&gt; Female</code></pre>
+    </section>
+
+    <section class="labels-textarea">
+      <h3>📝 Labels and Textareas</h3>
+      <p>Always associate labels with inputs using the <code>for</code> attribute.</p>
+      <pre><code>&lt;label for="bio"&gt;Your bio:&lt;/label&gt;
+&lt;textarea id="bio" name="bio" rows="4" cols="30"&gt;&lt;/textarea&gt;</code></pre>
+    </section>
+
+    <section class="select-dropdown">
+      <h3>📋 Dropdown Menus with <code>&lt;select&gt;</code></h3>
+      <pre><code>&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;select id="country" name="country"&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="de"&gt;Germany&lt;/option&gt;
+  &lt;option value="ba"&gt;Bosnia &amp; Herzegovina&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+    </section>
+
+    <section class="form-button">
+      <h3>🔘 Buttons</h3>
+      <pre><code>&lt;button type="submit"&gt;Submit Form&lt;/button&gt;
+&lt;button type="reset"&gt;Reset&lt;/button&gt;</code></pre>
+    </section>
+
+    <section class="example-form">
+      <h3>🧪 Example: Feedback Form</h3>
+      <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required /&gt;
+
+  &lt;label for="msg"&gt;Message:&lt;/label&gt;
+  &lt;textarea id="msg" name="message" rows="5"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Send Feedback&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;form&gt;</code> groups inputs together</li>
+        <li>Inputs like <code>text</code>, <code>email</code>, <code>radio</code>, and <code>checkbox</code> collect
+          various types of data</li>
+        <li>Always label inputs for accessibility</li>
+        <li><code>&lt;textarea&gt;</code> for longer text, <code>&lt;select&gt;</code> for dropdowns</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Create a sign-up form with fields for name, email, password, gender, and
+        favorite programming language.
+      </div>
+    </section>
+
+    <section class="lesson-next">
+      <h3>✅ HTML Section Complete!</h3>
+      <p>You've now mastered HTML basics! Up next: CSS – how to make your pages beautiful and responsive. 🎨</p>
+      <a href="lesson9.html">➡️ Next Lesson</a>
+      <a href="../index.html">⬅️ Back to Home</a>Lessons ➡️</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+</body>
+
+</html>

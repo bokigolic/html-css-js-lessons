@@ -4,27 +4,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learn Frontend - HTML, CSS, JS</title>
+  <title>LearnFrontend.dev</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="dark-mode">
 
-  <aside class="sidebar">
-    <h2>Lessons</h2>
-    <ul id="menu">
-      <li data-section="html">Learn HTML</li>
-      <li data-section="css">Learn CSS</li>
-      <li data-section="js">Learn JavaScript</li>
-    </ul>
-  </aside>
+  <!-- Loader -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
 
-  <main class="content" id="content">
-    <h1>Welcome to Learn Frontend</h1>
-    <p>Select a lesson from the sidebar to begin.</p>
+  <!-- Dark mode toggle -->
+  <button class="toggle-theme" onclick="document.body.classList.toggle('dark-mode')">🌙 Toggle Theme</button>
+
+  <!-- Header -->
+  <header class="main-header">
+    <h1>🚀 LearnFrontend.dev</h1>
+    <h2>Your journey to frontend mastery starts here</h2>
+    <nav style="margin-top: 1em;">
+      <a href="index.html">Home</a> |
+      <a href="lesson1.html">HTML</a> |
+      <a href="#">CSS</a> |
+      <a href="#">JavaScript</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <p>Build. Learn. Create.</p>
+    <p>Choose your path and start learning today!</p>
+  </section>
+
+  <!-- Course Selection -->
+  <main style="opacity: 0;">
+    <section>
+      <h3 style="text-align: center;">🎓 Choose a Course to Begin</h3>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 2rem;">
+
+        <a href="learn-html/lesson1.html" class="next-button" style="width: 260px; text-align: center;">
+          <h3>📘 HTML</h3>
+          <p>Learn the structure of the web with 10 beginner-friendly lessons.</p>
+        </a>
+
+        <a href="#" class="next-button" style="width: 260px; text-align: center;">
+          <h3>🎨 CSS</h3>
+          <p>Style your pages with modern layouts, colors, and animations.</p>
+        </a>
+
+        <a href="#" class="next-button" style="width: 260px; text-align: center;">
+          <h3>⚙️ JavaScript</h3>
+          <p>Make your websites interactive with logic, DOM, and APIs.</p>
+        </a>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+    <p>Created with ❤️ for future developers</p>
+  </footer>
 
+  <!-- JS -->
   <script src="app.js"></script>
 </body>
 

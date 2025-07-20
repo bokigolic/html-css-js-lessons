@@ -2,38 +2,47 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What is HTML?</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML for beginners - Lesson 1: Introduction to HTML" />
+  <title>Lesson 1: Introduction to HTML</title>
+  <link rel="stylesheet" href="../style.css" />
+  <script src="../app.js"></script>
 </head>
 
 <body>
-  <!DOCTYPE html>
-  <html lang="en">
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 1: Introduction to HTML</h2>
+  </header>
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
+  <main>
+    <section class="lesson-intro">
+      <h3>What is HTML?</h3>
+      <p>
+        HTML stands for <strong>HyperText Markup Language</strong>. It's the language that structures the content of the
+        web. Whether it's a blog post, a photo gallery, or a form to collect user input – HTML is what holds it all
+        together.
+      </p>
+      <p>
+        <em>HyperText</em> refers to the hyperlinks that connect web pages together. <em>Markup</em> is the set of tags
+        we use to "mark up" content with meaning. It tells the browser how to display things: headings, paragraphs,
+        lists, images, and more.
+      </p>
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Think of HTML like the blueprint of a house. It defines the structure, but not the
+        style – that's CSS's job!
+      </div>
+    </section>
 
-  <body>
-    <section>
-      <h1>🔤 What is HTML?</h1>
-
-      <p><strong>HTML</strong> stands for <em>HyperText Markup Language</em>. It’s the basic building block of every web
-        page on the internet.</p>
-
-      <ul>
-        <li>It defines the structure of web content.</li>
-        <li>Uses <strong>elements</strong> (called <em>tags</em>) to tell the browser how to display content.</li>
-        <li>Examples: headings, paragraphs, links, images, videos, and more.</li>
-      </ul>
-
-      <h2>📄 Basic HTML Page Example</h2>
+    <section class="lesson-structure">
+      <h3>Basic Structure of an HTML Document</h3>
+      <p>Every HTML document follows this basic template:</p>
       <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+&lt;html lang="en"&gt;
   &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
@@ -42,64 +51,97 @@
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-      <h2>🧠 Explanation of the Code</h2>
       <ul>
-        <li><code>&lt;!DOCTYPE html&gt;</code> — tells the browser this is an HTML5 document</li>
-        <li><code>&lt;html&gt;</code> — the root of the web page</li>
-        <li><code>&lt;head&gt;</code> — contains metadata like the page’s title</li>
-        <li><code>&lt;title&gt;</code> — sets the name shown in the browser tab</li>
-        <li><code>&lt;body&gt;</code> — holds all visible content</li>
-        <li><code>&lt;h1&gt;</code> — defines a heading (important text)</li>
-        <li><code>&lt;p&gt;</code> — defines a paragraph</li>
+        <li><code>&lt;!DOCTYPE html&gt;</code> – Declares the document type and version (HTML5).</li>
+        <li><code>&lt;html&gt;</code> – The root element that wraps the entire HTML page.</li>
+        <li><code>&lt;head&gt;</code> – Contains metadata like the page title, character encoding, styles, and scripts.
+        </li>
+        <li><code>&lt;body&gt;</code> – Holds the visible content of the page.</li>
       </ul>
 
-      <h2>🧩 What is an HTML Element?</h2>
-      <p>An HTML element consists of a <strong>start tag</strong>, <strong>content</strong>, and an <strong>end
-          tag</strong>.</p>
-
-      <pre><code>&lt;h1&gt;This is a heading&lt;/h1&gt;
-&lt;p&gt>This is a paragraph.&lt;/p&gt;</code></pre>
-
-      <p>Some elements are <strong>empty</strong>, meaning they don’t have content or an end tag (e.g.,
-        <code>&lt;br&gt;</code> for line break).
-      </p>
-
-      <h2>🌐 How Browsers Read HTML</h2>
-      <p>Web browsers like Chrome, Firefox, Safari, or Edge <strong>don’t show HTML tags</strong>. Instead, they use the
-        tags to format and display the content properly on screen.</p>
-
-      <h2>🧱 Visual Structure of an HTML Page</h2>
-      <pre><code>&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Page title&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;This is a heading&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-    &lt;p&gt;This is another paragraph.&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-
-      <p>👉 Everything inside <code>&lt;body&gt;</code> shows up on the page. The content of <code>&lt;title&gt;</code>
-        appears in the browser’s tab.</p>
-
-      <h2>📚 Brief History of HTML</h2>
-      <ul>
-        <li><strong>1989</strong> — Tim Berners-Lee invents the World Wide Web</li>
-        <li><strong>1991</strong> — First version of HTML is born</li>
-        <li><strong>1995</strong> — HTML 2.0 released</li>
-        <li><strong>1999</strong> — HTML 4.01 becomes standard</li>
-        <li><strong>2008+</strong> — HTML5 begins and becomes the modern standard</li>
-      </ul>
-
-      <p>Today, HTML5 is what we use to build modern websites with multimedia, responsive design, and cleaner structure.
-      </p>
+      <div class="example-box">
+        <strong>Example Use Case:</strong>
+        <p>Let's say you want to create a simple page with a heading and a paragraph:</p>
+        <pre><code>&lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+&lt;p&gt;This is my very first webpage using HTML.&lt;/p&gt;</code></pre>
+      </div>
     </section>
 
+    <section class="lesson-tags">
+      <h3>Common Tags You Must Know</h3>
+      <ul>
+        <li><code>&lt;title&gt;</code> – The title of your page (shown on the browser tab).</li>
+        <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> – Headings. Use <code>&lt;h1&gt;</code> for the main
+          title, and go down in order for subheadings.</li>
+        <li><code>&lt;p&gt;</code> – Paragraphs for normal text.</li>
+        <li><code>&lt;br&gt;</code> – Line break.</li>
+        <li><code>&lt;hr&gt;</code> – Horizontal line.</li>
+      </ul>
 
-  </body>
+      <div class="animated-section">
+        <h4>🎨 Fun Visualization</h4>
+        <p>Imagine headings as the structure of a newspaper: the big headline is <code>&lt;h1&gt;</code>, section titles
+          are <code>&lt;h2&gt;</code>, and smaller subtitles go down to <code>&lt;h6&gt;</code>.</p>
 
-  </html>
+      </div>
+
+      <div class="example-box">
+        <strong>HTML Example:</strong>
+        <pre><code>&lt;h1&gt;My Blog&lt;/h1&gt;
+&lt;h2&gt;Latest Posts&lt;/h2&gt;
+&lt;p&gt;Welcome to my corner of the internet. I write about tech, travel, and tutorials.&lt;/p&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="lesson-best-practices">
+      <h3>🌟 Best Practices</h3>
+      <ul>
+        <li>Use only one <code>&lt;h1&gt;</code> per page – it's the main headline.</li>
+        <li>Use semantic tags to describe your content clearly.</li>
+        <li>Write clean and properly indented code. It'll save you time in the long run.</li>
+        <li>Use comments (<code>&lt;!-- like this --&gt;</code>) to document sections of your HTML.</li>
+      </ul>
+
+      <pre><code>&lt;!-- This is a comment in HTML --&gt;
+&lt;h1&gt;Welcome&lt;/h1&gt;</code></pre>
+    </section>
+
+    <section class="lesson-animations">
+      <h3>💡 Interactive Demo (optional with CSS/JS)</h3>
+      <p>Imagine clicking on different parts of a web page and seeing which HTML tags are behind them. We can create
+        something like that in future lessons using JavaScript.</p>
+      <div class="demo-placeholder">
+        <p>[Future interactive animation here: hover to reveal tags]</p>
+      </div>
+    </section>
+
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML is the backbone of all web content.</li>
+        <li>Tags like <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, and <code>&lt;title&gt;</code> define your
+          content's structure.</li>
+        <li>The HTML document is divided into <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</li>
+        <li>Practice by writing simple pages with headings and paragraphs.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Challenge:</strong> Try creating a basic page with your own name, a heading, and a short paragraph about
+        yourself.
+      </div>
+    </section>
+
+    <section class="lesson-next">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 2</strong>, we'll explore how to <em>format text</em> using HTML – bold, italics, underlines,
+        and more!</p>
+      <a href="lesson2.html">➡️ Next Lesson</a>
+      <a href="../index.html">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
 </body>
 
 </html>
