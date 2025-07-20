@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 13: Advanced Forms and Validation – Learn form fieldsets, client-side validation, and user-friendly interaction patterns." />
+  <title>Lesson 13: Advanced Forms & Validation</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 13: Advanced Forms & Validation</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson12.html">⬅️ Lesson 12</a> |
+      <a href="lesson13.html" class="active">Lesson 13</a> |
+      <a href="lesson14.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>📌 Why Advanced Forms?</h3>
+      <p>Modern forms must not only collect info but also validate it. This ensures data quality and improves user
+        experience before submitting to a server.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> HTML5 gives built-in validation tools with minimal JavaScript.</div>
+    </section>
+
+    <section class="fieldset-legend animated-section">
+      <h3>🧩 Group Fields with <code>&lt;fieldset&gt;</code></h3>
+      <pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;Account Info&lt;/legend&gt;
+  &lt;label for="user"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="user" name="user" required /&gt;
+&lt;/fieldset&gt;</code></pre>
+      <p><strong>Fieldset + Legend</strong> gives form sections semantic clarity, especially for accessibility.</p>
+    </section>
+
+    <section class="client-validation animated-section">
+      <h3>✅ Native HTML Validation</h3>
+      <ul>
+        <li><code>required</code> – Field must be filled</li>
+        <li><code>minlength</code>, <code>maxlength</code></li>
+        <li><code>pattern</code> – RegEx for format matching</li>
+        <li><code>type="email"</code>, <code>type="number"</code>, etc.</li>
+      </ul>
+      <pre><code>&lt;input type="email" name="email" required /&gt;
+&lt;input type="text" name="zip" pattern="[0-9]{5}" title="5-digit ZIP" /&gt;</code></pre>
+      <div class="tip-box">💡 Use <code>title</code> to explain pattern rules.</div>
+    </section>
+
+    <section class="form-accessibility animated-section">
+      <h3>♿ Accessibility Tips</h3>
+      <ul>
+        <li>Always pair <code>&lt;label&gt;</code> with <code>for</code> and <code>id</code></li>
+        <li>Use <code>aria-describedby</code> for hints or errors</li>
+        <li>Provide success/failure states visually and programmatically</li>
+      </ul>
+    </section>
+
+    <section class="form-example animated-section">
+      <h3>🧪 Complete Form Example</h3>
+      <pre><code>&lt;form action="/submit" method="post"&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Sign Up&lt;/legend&gt;
+
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required /&gt;
+
+    &lt;label for="pass"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="pass" name="password" minlength="6" required /&gt;
+
+    &lt;label for="age"&gt;Age:&lt;/label&gt;
+    &lt;input type="number" id="age" name="age" min="18" max="99" /&gt;
+
+    &lt;label for="bio"&gt;Short Bio:&lt;/label&gt;
+    &lt;textarea id="bio" name="bio"&gt;&lt;/textarea&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button type="submit"&gt;Register&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+    </section>
+
+    <section class="lesson-test animated-section">
+      <h3>🧪 Try It Yourself</h3>
+      <a class="next-button" href="../test/index.html">🧪 Open Live Code Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Use <code>&lt;fieldset&gt;</code> and <code>&lt;legend&gt;</code> for semantic grouping</li>
+        <li>Apply <code>required</code>, <code>pattern</code>, and <code>minlength</code> to validate inputs</li>
+        <li>Enhance accessibility with <code>aria</code> attributes</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a newsletter form requiring name, email, and ZIP code (5 digits only).
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 14, we begin CSS foundations: colors, selectors, and inline styling!</p>
+      <a href="lesson14.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

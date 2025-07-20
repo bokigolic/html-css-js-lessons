@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lesson 20: CSS Flexbox – Learn how to build flexible layouts with CSS Flexbox.">
+  <title>Lesson 20: CSS Flexbox</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .flex-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .flex-item {
+      background: var(--secondary);
+      color: var(--text);
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 8px;
+      flex: 1 1 150px;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🤹 CSS Flexbox</h1>
+    <h2>Lesson 20: CSS Flexbox</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson19.html">⬅️ Lesson 19</a> |
+      <a href="lesson20.html" class="active">Lesson 20</a> |
+      <a href="lesson21.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>➡️ What is Flexbox?</h3>
+      <p>CSS Flexbox is a one-dimensional layout system. It helps distribute space and align items in a row or column.
+      </p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use Flexbox for navigation bars, card layouts, and vertical
+        centering!</div>
+    </section>
+
+    <section class="flex-basics animated-section">
+      <h3>➡️ Defining a Flex Container</h3>
+      <pre><code>.flex-container {
+  display: flex;
+  gap: 1rem;
+}</code></pre>
+      <p>This enables horizontal layout with spacing between items.</p>
+    </section>
+
+    <section class="align-items animated-section">
+      <h3>➡️ Aligning and Justifying</h3>
+      <pre><code>.flex-container {
+  justify-content: center; /* align horizontally */
+  align-items: center;     /* align vertically */
+}</code></pre>
+      <p>Control how items align within the flex container.</p>
+    </section>
+
+    <section class="flex-wrap animated-section">
+      <h3>➡️ Wrapping Items</h3>
+      <pre><code>.flex-container {
+  flex-wrap: wrap;
+}
+.flex-item {
+  flex: 1 1 150px;
+}</code></pre>
+      <p>This lets items wrap to the next line when space is limited.</p>
+    </section>
+
+    <section class="flex-demo animated-section">
+      <h3>➡️ Live Flexbox Example</h3>
+      <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+        <div class="flex-item">Item 4</div>
+      </div>
+      <div class="tip-box"><strong>UX Tip:</strong> Set `flex: 1 1 auto` for fluid/flexible card layouts.</div>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Flexbox Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>`display: flex;` turns a container flexible.</li>
+        <li>`justify-content` = horizontal alignment.</li>
+        <li>`align-items` = vertical alignment.</li>
+        <li>`flex-wrap` allows wrapping of items.</li>
+        <li>`flex: grow shrink basis;` controls item sizing.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Create a responsive header with a logo on the left, menu in the center, and
+        buttons on the right.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 21, we'll explore advanced CSS: variables, transitions & animations! ✨</p>
+      <a href="lesson21.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

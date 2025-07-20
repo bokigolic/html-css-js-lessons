@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 10: Final Project & Review - Wrap up your HTML learning journey and build your first personal webpage!" />
+  <title>Lesson 10: Final Project & Review</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 10: Final Project & Review</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson9.html">⬅️ Lesson 9</a> |
+      <a href="lesson10.html" class="active">Lesson 10</a> |
+      <a href="lesson-css-intro.html">➡️ CSS Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="review-summary animated-section">
+      <h3>🔁 Quick Recap</h3>
+      <ul>
+        <li>Lesson 1: HTML Basics</li>
+        <li>Lesson 2: Text Formatting</li>
+        <li>Lesson 3: Elements & Attributes</li>
+        <li>Lesson 4: Links & Navigation</li>
+        <li>Lesson 5: Images & Multimedia</li>
+        <li>Lesson 6: Lists</li>
+        <li>Lesson 7: Tables</li>
+        <li>Lesson 8: Forms</li>
+        <li>Lesson 9: Semantic HTML</li>
+      </ul>
+      <p>Now it’s your turn to shine with your own creation! ✨</p>
+    </section>
+
+    <section class="project-brief animated-section">
+      <h3>🎯 Final Mini Project</h3>
+      <p>Create a personal webpage that showcases your skills or interests.</p>
+      <h4>✅ Include these:</h4>
+      <ul>
+        <li><code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code></li>
+        <li>Navigation menu with <code>&lt;a&gt;</code> links</li>
+        <li>At least one <strong>image</strong> and one <strong>list</strong></li>
+        <li>A <strong>form</strong> (like contact or signup)</li>
+        <li>Use of semantic tags: <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>
+        </li>
+      </ul>
+    </section>
+
+    <section class="starter-template animated-section">
+      <h3>🧰 Starter Template</h3>
+      <p>Use this as a base:</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Personal Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;nav&gt;
+    &lt;a href="#about"&gt;About&lt;/a&gt;
+    &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+  &lt;/nav&gt;
+
+  &lt;main&gt;
+    &lt;section id="about"&gt;
+      &lt;h2&gt;About Me&lt;/h2&gt;
+      &lt;p&gt;I love building websites and learning HTML!&lt;/p&gt;
+      &lt;img src="me.jpg" alt="My picture" /&gt;
+    &lt;/section&gt;
+
+    &lt;section&gt;
+      &lt;h2&gt;My Favorites&lt;/h2&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Coding&lt;/li&gt;
+        &lt;li&gt;Design&lt;/li&gt;
+        &lt;li&gt;Coffee&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/section&gt;
+
+    &lt;section id="contact"&gt;
+      &lt;h2&gt;Contact Me&lt;/h2&gt;
+      &lt;form&gt;
+        &lt;label for="email"&gt;Email:&lt;/label&gt;
+        &lt;input type="email" id="email" name="email" required /&gt;
+        &lt;label for="message"&gt;Message:&lt;/label&gt;
+        &lt;textarea id="message" name="message"&gt;&lt;/textarea&gt;
+        &lt;button type="submit"&gt;Send&lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;&copy; 2025 YourName. All rights reserved.&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </section>
+
+    <section class="next-steps animated-section">
+      <h3>🚀 What's Next?</h3>
+      <p>You've now mastered HTML. Next up: 🎨 CSS to style your pages beautifully!</p>
+      <a href="lesson-css-intro.html" class="next-button">Start CSS Lessons ➡️</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

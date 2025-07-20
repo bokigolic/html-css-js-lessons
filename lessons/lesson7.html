@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lesson 7: HTML Tables – Create and style data tables with accessibility in mind." />
+  <title>Lesson 7: HTML Tables</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 7: HTML Tables</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson6.html">⬅️ Lesson 6</a> |
+      <a href="lesson7.html" class="active">Lesson 7</a> |
+      <a href="lesson8.html">➡️ Lesson 8</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>📊 Why Use Tables?</h3>
+      <p>Tables are perfect for structured data — schedules, product comparisons, or pricing plans. They help users
+        understand information fast and clearly.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use tables for data, not layout. Layout should be handled with CSS
+        flexbox or grid.</div>
+    </section>
+
+    <section class="table-basics animated-section">
+      <h3>🔹 Basic Table Structure</h3>
+      <pre><code>&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope="col"&gt;Name&lt;/th&gt;
+      &lt;th scope="col"&gt;Age&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Ana&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+      <p><strong>📎 Key Tags:</strong> <code>&lt;thead&gt;</code> for headers, <code>&lt;tbody&gt;</code> for data rows,
+        <code>scope="col"</code> for accessibility.</p>
+    </section>
+
+    <section class="spanning animated-section">
+      <h3>🧩 colspan & rowspan</h3>
+      <p>Use these attributes to merge cells across columns or rows:</p>
+      <pre><code>&lt;td colspan="2"&gt;Merged cell&lt;/td&gt;
+&lt;td rowspan="2"&gt;Spans 2 rows&lt;/td&gt;</code></pre>
+      <div class="note-box"><strong>⚠️ Pro Tip:</strong> Always match <code>colspan</code>/<code>rowspan</code> to the
+        table structure to avoid broken layouts.</div>
+    </section>
+
+    <section class="styled-table animated-section">
+      <h3>🎨 Styling Tables with CSS</h3>
+      <pre><code>table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid var(--shadow);
+  padding: 0.75rem;
+  text-align: left;
+}
+tr:nth-child(even) {
+  background-color: var(--row-alt);
+}</code></pre>
+      <p>Add zebra striping, spacing, and hover effects for better UX.</p>
+    </section>
+
+    <section class="examples animated-section">
+      <h3>🧪 Example: Weekly Schedule</h3>
+      <pre><code>&lt;table&gt;
+  &lt;caption&gt;My Weekly Routine&lt;/caption&gt;
+  &lt;tr&gt;&lt;th&gt;Day&lt;/th&gt;&lt;th&gt;Activity&lt;/th&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Monday&lt;/td&gt;&lt;td&gt;Workout&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Tuesday&lt;/td&gt;&lt;td&gt;Coding Practice&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+
+    <section class="practice animated-section">
+      <h3>🧠 Practice Challenge</h3>
+      <p>Create a pricing table with 3 plans. Include:</p>
+      <ul>
+        <li>Plan Name</li>
+        <li>Price</li>
+        <li>Features</li>
+      </ul>
+      <div class="example-box">
+        <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Plan&lt;/th&gt;
+    &lt;th&gt;Price&lt;/th&gt;
+    &lt;th&gt;Features&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Basic&lt;/td&gt;
+    &lt;td&gt;$9/mo&lt;/td&gt;
+    &lt;td&gt;Email support&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Pro&lt;/td&gt;
+    &lt;td&gt;$19/mo&lt;/td&gt;
+    &lt;td&gt;Priority + Email support&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;table&gt;</code> for data structure</li>
+        <li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> for clarity</li>
+        <li><code>colspan</code>, <code>rowspan</code> for merged cells</li>
+        <li>Use <code>scope</code> and <code>caption</code> for accessibility</li>
+        <li>Style with borders, padding, striping</li>
+      </ul>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>Lesson 8 will guide you through building interactive forms with <code>&lt;form&gt;</code>,
+        <code>&lt;input&gt;</code>, and more.</p>
+      <a class="next-button" href="lesson8.html">➡️ Next Lesson</a>
+      <a class="next-button" href="../index.html">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

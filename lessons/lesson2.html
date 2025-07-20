@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 2: Text Formatting – Learn how to bold, italicize, emphasize, and structure your content semantically in HTML.">
+  <meta name="keywords" content="HTML, formatting, bold, italic, semantic, visual, accessibility">
+  <meta name="author" content="LearnFrontend.dev">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <title>Lesson 2: Text Formatting</title>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle dark mode">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 2: Text Formatting</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson1.html">⬅️ Lesson 1</a> |
+      <a href="lesson2.html" class="active">Lesson 2</a> |
+      <a href="lesson3.html">Next ➡️</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🖋️ Why Text Formatting Matters</h3>
+      <p>
+        Text formatting allows you to highlight key points, organize content for better readability, and add visual
+        interest to plain text. Without formatting, your content would feel flat, overwhelming, and hard to scan.
+      </p>
+      <p>
+        HTML offers a powerful set of tags for formatting text — both for <strong>visual style</strong> and
+        <strong>semantic meaning</strong>. The better you understand these tools, the more effectively you’ll
+        communicate with users and assistive technologies.
+      </p>
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Always format with intention. Don’t use <code>&lt;b&gt;</code> just to make something
+        look "cool" — use tags that match the meaning of your content.
+      </div>
+    </section>
+
+    <section class="basic-tags animated-section">
+      <h3>📝 Common Formatting Tags</h3>
+      <ul>
+        <li><code>&lt;b&gt;</code> – Bold (visual only)</li>
+        <li><code>&lt;strong&gt;</code> – Important (semantic + bold)</li>
+        <li><code>&lt;i&gt;</code> – Italic (visual only)</li>
+        <li><code>&lt;em&gt;</code> – Emphasized (semantic + italic)</li>
+        <li><code>&lt;u&gt;</code> – Underline</li>
+        <li><code>&lt;sup&gt;</code> – Superscript (e.g. x<sup>2</sup>)</li>
+        <li><code>&lt;sub&gt;</code> – Subscript (e.g. H<sub>2</sub>O)</li>
+      </ul>
+
+      <div class="example-box">
+        <strong>📘 Example:</strong>
+        <pre><code>&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt;, &lt;i&gt;italic&lt;/i&gt;, and &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;
+&lt;p&gt;Use &lt;strong&gt;strong&lt;/strong&gt; and &lt;em&gt;emphasis&lt;/em&gt; to convey importance.&lt;/p&gt;
+&lt;p&gt;Formula: H&lt;sub&gt;2&lt;/sub&gt;O | Math: x&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="line-breaks animated-section">
+      <h3>📏 Line Breaks and Horizontal Rules</h3>
+      <p>Need to break up text or add spacing? Use these tags:</p>
+      <ul>
+        <li><code>&lt;br&gt;</code> – Adds a line break (like hitting “Enter”)</li>
+        <li><code>&lt;hr&gt;</code> – Adds a horizontal dividing line</li>
+      </ul>
+      <div class="example-box">
+        <pre><code>&lt;p&gt;First line&lt;br&gt;Second line&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;After horizontal rule.&lt;/p&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="semantic-difference animated-section">
+      <h3>🎯 Semantic vs. Visual Formatting</h3>
+      <p>
+        Not all tags are equal. Some are <strong>semantic</strong> — they convey meaning. Others are just
+        <strong>visual</strong> — they only affect how content looks.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Visual</th>
+            <th>Semantic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>&lt;b&gt;</code></td>
+            <td><code>&lt;strong&gt;</code></td>
+          </tr>
+          <tr>
+            <td><code>&lt;i&gt;</code></td>
+            <td><code>&lt;em&gt;</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip-box">
+        <strong>🧠 Best Practice:</strong> Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> for content
+        that’s meaningful, like alerts, warnings, and emphasis in instructions.
+      </div>
+    </section>
+
+    <section class="fun-activity animated-section">
+      <h3>🧠 Practice Challenge</h3>
+      <p>Create a simple resume-style layout using formatting tags:</p>
+      <pre><code>&lt;h1&gt;Jane Doe&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;Web Developer&lt;/strong&gt; with a passion for &lt;em&gt;clean code&lt;/em&gt; and &lt;u&gt;UX&lt;/u&gt;.&lt;/p&gt;
+&lt;p&gt;Quote: &lt;em&gt;"Code is poetry"&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Math: E = mc&lt;sup&gt;2&lt;/sup&gt;&lt;/p&gt;</code></pre>
+    </section>
+
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> for semantic emphasis</li>
+        <li>Use <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> for visual-only changes (if necessary)</li>
+        <li><code>&lt;br&gt;</code> and <code>&lt;hr&gt;</code> help break up content and improve flow</li>
+        <li>Text formatting boosts readability, hierarchy, and UX</li>
+      </ul>
+
+      <div class="note-box">
+        <strong>🎯 Mini Challenge:</strong> Create a bio or quote that uses <code>&lt;strong&gt;</code>,
+        <code>&lt;em&gt;</code>, and <code>&lt;sup&gt;</code>.
+      </div>
+    </section>
+
+    <section class="lesson-test">
+      <h3>💻 Try It Yourself</h3>
+      <p>Test everything you've learned right away:</p>
+      <a class="next-button" href="../test/index.html">🔧 Open Live Tester</a>
+    </section>
+
+    <section class="lesson-next">
+      <h3>⬅️ Navigation</h3>
+      <a class="next-button" href="lesson1.html">⬅️ Previous Lesson</a>
+      <a class="next-button" href="../index.html">🏠 Home</a>
+      <a class="next-button" href="lesson3.html">➡️ Next Lesson</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

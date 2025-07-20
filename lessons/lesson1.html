@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn HTML for beginners – Lesson 1: Introduction to HTML" />
+  <title>Lesson 1: Introduction to HTML</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 1: Introduction to HTML</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson1.html" class="active">Lesson 1</a> |
+      <a href="lesson2.html">Next Lesson</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <div class="lesson-box animated-section">
+      <h3>🌐 What is HTML?</h3>
+      <p><strong>HTML</strong> (<em>HyperText Markup Language</em>) is the 🧱 of the web—it structures text, links,
+        images, and more.</p>
+      <div class="tip-box">
+        💡 <strong>Tip:</strong> Think of HTML as the blueprint of a building—the foundation for everything else!
+      </div>
+
+      <h3>🧩 Basic Document Structure</h3>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is HTML!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <p>This template includes:</p>
+      <ul>
+        <li><code>&lt;!DOCTYPE html&gt;</code> – declares HTML5</li>
+        <li><code>&lt;html&gt;</code> – root element</li>
+        <li><code>&lt;head&gt;</code> – meta-information (title, styles)</li>
+        <li><code>&lt;body&gt;</code> – visible content</li>
+      </ul>
+
+      <div class="example-box">
+        <strong>Example:</strong>
+        <pre><code>&lt;h1&gt;Welcome!&lt;/h1&gt;
+&lt;p&gt;Start your HTML journey here.&lt;/p&gt;</code></pre>
+      </div>
+
+      <div class="note-box">
+        <strong>⚠️ Best Practices:</strong> Always indent nested tags—clean, readable code saves time later!
+      </div>
+
+      <h3>🧪 Try This:</h3>
+      <p>In your test area, build a simple page with:</p>
+      <ul>
+        <li>An <code>&lt;h1&gt;</code> heading</li>
+        <li>Two paragraphs describing yourself</li>
+        <li>A comment explaining one section</li>
+      </ul>
+
+      <div class="lesson-summary">
+        <h3>📌 Summary</h3>
+        <ul>
+          <li>HTML structures web content.</li>
+          <li>Start with the standard boilerplate template.</li>
+          <li>Use semantic tags (<code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, etc.).</li>
+        </ul>
+        <div class="note-box">
+          <strong>Challenge:</strong> Add a second heading and another paragraph about your favorite hobby.
+        </div>
+      </div>
+
+      <div class="lesson-next">
+        <h3>➡️ Coming Up Next</h3>
+        <p>Lesson 2 covers formatting text: bold, italics, superscripts, and more.</p>
+        <a class="next-button" href="lesson2.html">➡️ Next Lesson</a>
+        <a class="next-button" href="../index.html">⬅️ Back to Home</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

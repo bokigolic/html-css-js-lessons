@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 14: CSS Basics – Learn about colors, selectors, and simple styles for your HTML pages.">
+  <title>Lesson 14: CSS Basics</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🎨 CSS Course Introduction</h1>
+    <h2>Lesson 14: CSS Basics</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson13.html">⬅️ Lesson 13</a> |
+      <a href="lesson14.html" class="active">Lesson 14</a> |
+      <a href="lesson15.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🌈 What is CSS?</h3>
+      <p>CSS (Cascading Style Sheets) controls the appearance of HTML elements—color, layout, spacing, fonts and more.
+        It makes your content visually engaging!</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Think of CSS as the “clothes” and “make-up” for your HTML
+        “skeleton”.</div>
+    </section>
+
+    <section class="selectors animated-section">
+      <h3>🛠️ CSS Selectors</h3>
+      <p>Select which HTML elements you want to style:</p>
+      <pre><code>/* element */ 
+h1 { color: darkblue; }
+
+/* class */ 
+.tip-box { background: lightgoldenrodyellow; }
+
+/* id */ 
+#special { font-weight: bold; }
+</code></pre>
+      <div class="tip-box"><strong>💡 Pro Tip:</strong> Classes are reusable; IDs are unique per page.</div>
+    </section>
+
+    <section class="properties animated-section">
+      <h3>🎯 Common Properties</h3>
+      <ul>
+        <li><code>color</code> – text color</li>
+        <li><code>background-color</code></li>
+        <li><code>font-size</code></li>
+        <li><code>margin</code>, <code>padding</code></li>
+        <li><code>border</code></li>
+      </ul>
+      <pre><code>p {
+  color: #333;
+  background-color: #f0f0f0;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+</code></pre>
+    </section>
+
+    <section class="box-model animated-section">
+      <h3>📦 The Box Model</h3>
+      <p>Every HTML element has padding, border, margin around its content:</p>
+      <pre><code>div {
+  width: 200px;
+  padding: 10px;
+  border: 2px solid red;
+  margin: 20px;
+}
+</code></pre>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use <code>box-sizing: border-box;</code> to simplify width
+        calculations.</div>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Live Practice</h3>
+      <a class="next-button" href="../test/index.html">Open Live CSS Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>CSS selects elements via tags, classes, or IDs</li>
+        <li>Properties change color, spacing, borders, fonts</li>
+        <li>Box model determines sizing/design layout</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Style a small card: add background, padding, border, and set its width and text
+        color.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 15, we'll explore layout fundamentals: Flexbox and Grid!</p>
+      <a href="lesson15.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

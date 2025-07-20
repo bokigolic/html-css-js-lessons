@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lesson 24: Flexbox Basics – Learn how to build flexible layouts with CSS Flexbox.">
+  <title>Lesson 24: Flexbox Basics</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .flex-container {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+    .flex-item {
+      background: var(--secondary);
+      color: var(--text);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+      flex: 1;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🔧 CSS Flexbox Basics</h1>
+    <h2>Lesson 24: Flexbox</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson23.html">⬅️ Lesson 23</a> |
+      <a href="lesson24.html" class="active">Lesson 24</a> |
+      <a href="lesson25.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🤝 What is Flexbox?</h3>
+      <p>Flexbox helps you align and distribute space among items in a container — ideal for one-dimensional layouts.
+      </p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use Flexbox for rows or columns, not complex grids (that’s Grid’s
+        job!).</div>
+    </section>
+
+    <section class="flex-setup animated-section">
+      <h3>➡️ Setting Up Flex Container</h3>
+      <pre><code>.container {
+  display: flex;
+  flex-direction: row; /* or column */
+  gap: 1rem;
+}</code></pre>
+      <p>`flex-direction` defines the main axis. `gap` adds space between flex items.</p>
+    </section>
+
+    <section class="demo-flex animated-section">
+      <h3>➡️ Live Flex Demo</h3>
+      <div class="flex-container">
+        <div class="flex-item">Box A</div>
+        <div class="flex-item">Box B</div>
+        <div class="flex-item">Box C</div>
+      </div>
+      <div class="tip-box"><strong>UX Tip:</strong> Combine `justify-content` and `align-items` to center elements.
+      </div>
+    </section>
+
+    <section class="properties animated-section">
+      <h3>➡️ Key Flex Properties</h3>
+      <ul>
+        <li><code>justify-content: center | space-between | space-around;</code> – align along main axis</li>
+        <li><code>align-items: center | flex-start | stretch;</code> – align along cross axis</li>
+        <li><code>flex: 1;</code> – make items grow equally</li>
+      </ul>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Flex Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Enable flex with `display: flex`.</li>
+        <li>Define direction with `flex-direction`.</li>
+        <li>Use `justify-content` and `align-items` to position items.</li>
+        <li>`flex` allows items to grow/shrink proportionally.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Create a responsive navbar: horizontally aligned on desktop, vertical on
+        mobile, with centered items.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 25, we’ll explore CSS Animations – add movement and life to your designs! 🎥</p>
+      <a href="lesson25.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

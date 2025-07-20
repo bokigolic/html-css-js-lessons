@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 22: Responsive Design – Learn mobile-first layouts and media queries for responsive pages.">
+  <title>Lesson 22: Responsive Design & Media Queries</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .responsive-box {
+      background: var(--secondary);
+      color: var(--text);
+      padding: 2rem;
+      text-align: center;
+      margin: 2rem auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 8px;
+    }
+
+    @media (min-width: 600px) {
+      .responsive-box {
+        background: var(--primary);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .responsive-box {
+        max-width: 800px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>📱 Responsive Design</h1>
+    <h2>Lesson 22: Media Queries</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson21.html">⬅️ Lesson 21</a> |
+      <a href="lesson22.html" class="active">Lesson 22</a> |
+      <a href="lesson23.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🌍 Why Responsive?</h3>
+      <p>Responsive design adapts your layout to look great on phones, tablets, and desktops—all using the same HTML.
+      </p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Always start mobile-first: design for the smallest screen, then add
+        enhancements.</div>
+    </section>
+
+    <section class="media-basics animated-section">
+      <h3>➡️ Media Query Syntax</h3>
+      <pre><code>@media (min-width: 600px) {
+  .container {
+    /* styles for tablets and up */
+  }
+}</code></pre>
+      <p>You wrap any CSS inside `@media` to apply only on screens wider than 600px.</p>
+    </section>
+
+    <section class="demo-box-section animated-section">
+      <h3>➡️ Live Demo</h3>
+      <div class="responsive-box">Resize the window to see style changes.</div>
+      <div class="tip-box"><strong>UX Tip:</strong> Use breakpoints that match your design, not pre-defined device
+        widths.</div>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Responsive Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Start mobile-first: basic styles apply everywhere.</li>
+        <li>Add `@media (min-width: Xpx)` for larger screens.</li>
+        <li>Use flexible units: `%`, `em`, `rem`, `vw`.</li>
+        <li>Test at different window sizes for real responsiveness.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a 2-column layout on desktop that stacks vertically on mobile, using
+        media queries.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 23, we'll dive into CSS Grid—a powerful tool for 2D layouts! 🧩</p>
+      <a href="lesson23.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

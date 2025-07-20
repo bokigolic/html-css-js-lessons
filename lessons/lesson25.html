@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 25: CSS Animations – Learn how to add movement and life to your UI using CSS keyframes and transitions.">
+  <title>Lesson 25: CSS Animations</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .animate-box {
+      width: 100px;
+      height: 100px;
+      background: var(--primary);
+      margin: 2rem auto;
+      border-radius: 8px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+    }
+
+    .transition-box {
+      width: 100px;
+      height: 100px;
+      background: var(--secondary);
+      margin: 2rem auto;
+      border-radius: 8px;
+      transition: transform 0.3s ease, background 0.3s;
+    }
+
+    .transition-box:hover {
+      transform: rotate(15deg) scale(1.1);
+      background: var(--primary);
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🎥 CSS Animations</h1>
+    <h2>Lesson 25: Bring UI to Life</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson24.html">⬅️ Lesson 24</a> |
+      <a href="lesson25.html" class="active">Lesson 25</a> |
+      <a href="lesson26.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>💡 Why Animations?</h3>
+      <p>Animations make interfaces feel alive: they guide users, provide feedback, and add polish to experiences.</p>
+      <div class="tip-box"><strong>UX Tip:</strong> Keep animations smooth and purposeful — don't distract users!</div>
+    </section>
+
+    <section class="keyframes animated-section">
+      <h3>➡️ Keyframes Animation</h3>
+      <pre><code>@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.7; }
+}
+
+.animate-box {
+  animation: pulse 2s ease-in-out infinite;
+}</code></pre>
+      <div class="animate-box"></div>
+      <p>That box pulses smoothly — great for drawing attention to buttons or cards.</p>
+    </section>
+
+    <section class="transitions animated-section">
+      <h3>➡️ CSS Transitions</h3>
+      <pre><code>.transition-box {
+  transition: transform 0.3s ease, background 0.3s;
+}
+.transition-box:hover {
+  transform: rotate(15deg) scale(1.1);
+  background: var(--primary);
+}</code></pre>
+      <div class="transition-box"></div>
+      <p>Hover to see a smooth rotate and color change — perfect for buttons or interactive elements.</p>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try It Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Animations Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Use `@keyframes` + `animation` for repeating motions.</li>
+        <li>Use `transition` for smooth style changes on interaction.</li>
+        <li>Keep animations intentional, not overwhelming.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Add a button that changes color and scale on hover, plus a looping wobble
+        effect on page load.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 26, we'll explore CSS Variables & Custom Properties — make themes and dynamic styles easy! 🎨</p>
+      <a href="lesson26.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

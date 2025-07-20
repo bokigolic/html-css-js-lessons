@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 6: HTML Lists – Learn how to organize content using ordered, unordered, and description lists in HTML." />
+  <title>Lesson 6: HTML Lists</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle dark mode">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 6: HTML Lists</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson5.html">⬅️ Lesson 5</a> |
+      <a href="lesson6.html" class="active">Lesson 6</a> |
+      <a href="lesson7.html">➡️ Lesson 7</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>📋 Why Use Lists?</h3>
+      <p>Lists help structure content into bite-sized chunks: steps in a process, navigation menus, to-dos, or even
+        glossaries. HTML provides multiple types of lists for different purposes.</p>
+      <div class="tip-box">
+        <strong>💡 UX Tip:</strong> Lists improve readability and help screen readers navigate structured data.
+      </div>
+    </section>
+
+    <section class="unordered-list animated-section">
+      <h3>🔹 Unordered List – <code>&lt;ul&gt;</code></h3>
+      <p>Used when order doesn’t matter, like a checklist or ingredients:</p>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      <div class="note-box">
+        <strong>Semantic Tip:</strong> Always wrap list items with <code>&lt;li&gt;</code> and keep indentation
+        consistent.
+      </div>
+    </section>
+
+    <section class="ordered-list animated-section">
+      <h3>🔸 Ordered List – <code>&lt;ol&gt;</code></h3>
+      <p>Used when sequence matters, like instructions:</p>
+      <pre><code>&lt;ol&gt;
+  &lt;li&gt;Mix ingredients&lt;/li&gt;
+  &lt;li&gt;Preheat oven&lt;/li&gt;
+  &lt;li&gt;Bake for 30 minutes&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+    </section>
+
+    <section class="list-style-tip animated-section">
+      <h3>🎨 Customizing List Styles</h3>
+      <p>With CSS, you can change list markers:</p>
+      <pre><code>ul {
+  list-style-type: square;
+}
+ol {
+  list-style-type: upper-roman;
+}</code></pre>
+      <p>Other values include <code>circle</code>, <code>decimal</code>, <code>lower-alpha</code>, etc.</p>
+    </section>
+
+    <section class="nested-lists animated-section">
+      <h3>📦 Nested Lists</h3>
+      <p>Lists can contain other lists for hierarchy:</p>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Fruits
+    &lt;ul&gt;
+      &lt;li&gt;Apple&lt;/li&gt;
+      &lt;li&gt;Banana&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Vegetables&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+      <div class="tip-box">
+        <strong>🔧 Dev Tip:</strong> Always align closing tags properly — nesting errors can cause strange layouts!
+      </div>
+    </section>
+
+    <section class="description-lists animated-section">
+      <h3>📖 Description List – <code>&lt;dl&gt;</code></h3>
+      <p>Great for glossaries, FAQs, or metadata:</p>
+      <pre><code>&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;HyperText Markup Language&lt;/dd&gt;
+  &lt;dt&gt;CSS&lt;/dt&gt;
+  &lt;dd&gt;Cascading Style Sheets&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+      <p><code>&lt;dt&gt;</code> = term | <code>&lt;dd&gt;</code> = description</p>
+    </section>
+
+    <section class="practice-section animated-section">
+      <h3>🧠 Practice: Build a Weekly Planner</h3>
+      <p>Use:</p>
+      <ul>
+        <li><code>&lt;ol&gt;</code> for weekday tasks</li>
+        <li><code>&lt;ul&gt;</code> for weekend fun</li>
+        <li><code>&lt;dl&gt;</code> for glossary terms</li>
+      </ul>
+      <div class="example-box">
+        <pre><code>&lt;h2&gt;📅 Weekly Planner&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Monday – Team meeting&lt;/li&gt;
+  &lt;li&gt;Tuesday – Code review&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+  &lt;li&gt;Saturday – Hike⛰️&lt;/li&gt;
+  &lt;li&gt;Sunday – Chill 🎮&lt;/li&gt;
+&lt;/ul&gt;
+&lt;dl&gt;
+  &lt;dt&gt;Sprint&lt;/dt&gt;
+  &lt;dd&gt;2-week development cycle&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="lesson-test animated-section">
+      <h3>🧪 Try It Yourself</h3>
+      <a class="next-button" href="../test/index.html">🧪 Open Live Code Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;ul&gt;</code> – unordered (bulleted) list</li>
+        <li><code>&lt;ol&gt;</code> – ordered (numbered) list</li>
+        <li><code>&lt;li&gt;</code> – individual list item</li>
+        <li><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code> – description list</li>
+      </ul>
+      <div class="note-box">
+        <strong>Challenge:</strong> Create a full recipe card: ingredients in a <code>&lt;ul&gt;</code>, steps in an
+        <code>&lt;ol&gt;</code>, and a glossary with <code>&lt;dl&gt;</code>.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 7</strong>, we’ll build tables using <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>,
+        <code>&lt;td&gt;</code>, and more.</p>
+      <a class="next-button" href="lesson5.html">⬅️ Previous Lesson</a>
+      <a class="next-button" href="../index.html">🏠 Home</a>
+      <a class="next-button" href="lesson7.html">➡️ Next Lesson</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

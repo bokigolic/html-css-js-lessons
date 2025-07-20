@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 3: HTML Elements and Attributes – Understand the building blocks of every web page with practical examples and best practices.">
+  <meta name="keywords" content="HTML, elements, attributes, tags, semantic HTML, global attributes">
+  <meta name="author" content="LearnFrontend.dev">
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+  <title>Lesson 3: HTML Elements and Attributes</title>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle dark mode">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 3: HTML Elements and Attributes</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson2.html">⬅️ Lesson 2</a> |
+      <a href="lesson3.html" class="active">Lesson 3</a> |
+      <a href="lesson4.html">Next ➡️</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🧱 HTML Elements – The Core Building Blocks</h3>
+      <p>Every web page is built using HTML elements. An element is a combination of a tag and its content:</p>
+      <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+      <p>Here, <code>&lt;p&gt;</code> is the tag and the entire block is an element. Most elements have an opening and
+        closing tag, although some are self-closing (like <code>&lt;br&gt;</code>).</p>
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Think of HTML elements as Lego bricks. You stack them to build the structure of your
+        page!
+      </div>
+    </section>
+
+    <section class="nested-elements animated-section">
+      <h3>📦 Nested Elements</h3>
+      <p>Elements can contain other elements — this is called <strong>nesting</strong>. Proper nesting ensures your
+        document structure is valid and behaves correctly.</p>
+      <pre><code>&lt;div&gt;
+  &lt;h2&gt;Title&lt;/h2&gt;
+  &lt;p&gt;This is a &lt;strong&gt;nested&lt;/strong&gt; paragraph.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      <p>Always close nested tags in the correct order. Improper nesting can lead to rendering bugs or broken
+        accessibility.</p>
+      <div class="note-box">
+        <strong>⚠️ Rule:</strong> Tags that open last should close first — like stacking and unstacking boxes.
+      </div>
+    </section>
+
+    <section class="attributes-intro animated-section">
+      <h3>🔑 What Are Attributes?</h3>
+      <p>Attributes add extra info to elements. They're placed inside the opening tag and follow a
+        <code>name="value"</code> format.</p>
+      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code></pre>
+      <ul>
+        <li><code>href</code> – Defines the link destination</li>
+        <li><code>target="_blank"</code> – Opens link in a new tab</li>
+      </ul>
+      <div class="tip-box">
+        <strong>👁️‍🗨️ FYI:</strong> Attributes enhance functionality but don’t usually appear on the screen — they
+        work behind the scenes.
+      </div>
+    </section>
+
+    <section class="global-attributes animated-section">
+      <h3>🌐 Global Attributes</h3>
+      <p>These attributes can be used on most HTML elements to control behavior or styling:</p>
+      <ul>
+        <li><code>id</code> – Uniquely identifies the element</li>
+        <li><code>class</code> – Categorizes elements for styling or scripting</li>
+        <li><code>style</code> – Inline CSS styling</li>
+        <li><code>title</code> – Tooltip shown on hover</li>
+      </ul>
+      <div class="example-box">
+        <pre><code>&lt;p id="intro" class="highlight" style="color:blue" title="Intro paragraph"&gt;
+  Welcome to my page!
+&lt;/p&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="semantic-importance animated-section">
+      <h3>🔍 Why Semantic Tags Matter</h3>
+      <p>Semantic elements (like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>,
+        <code>&lt;header&gt;</code>) describe their content clearly, which improves:</p>
+      <ul>
+        <li>Accessibility (for screen readers)</li>
+        <li>SEO (for search engines)</li>
+        <li>Code readability (for developers)</li>
+      </ul>
+      <div class="tip-box">
+        <strong>💡 Tip:</strong> Avoid using <code>&lt;div&gt;</code> for everything. Use semantic tags wherever
+        possible.
+      </div>
+    </section>
+
+    <section class="activity animated-section">
+      <h3>🧪 Practice Activity</h3>
+      <p>Create a basic profile card using elements and attributes:</p>
+      <pre><code>&lt;div class="card"&gt;
+  &lt;img src="cat.jpg" alt="A cute cat looking curious" /&gt;
+  &lt;h3&gt;Meet Miso&lt;/h3&gt;
+  &lt;p class="caption" title="This is Miso the cat"&gt;Curious and cuddly!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+    </section>
+
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Elements structure your content — use them wisely</li>
+        <li>Tags can nest, but they must be properly closed</li>
+        <li>Attributes enhance element functionality</li>
+        <li>Use semantic tags and global attributes like <code>id</code>, <code>class</code>, <code>title</code></li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a semantic contact card using <code>&lt;section&gt;</code>,
+        <code>&lt;img&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code> and attributes.
+      </div>
+    </section>
+
+    <section class="lesson-test">
+      <h3>🧪 Try It Yourself</h3>
+      <a class="next-button" href="../test/index.html">🔧 Launch the Live Tester</a>
+      </s

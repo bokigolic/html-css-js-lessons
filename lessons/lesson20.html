@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lesson 15: CSS Layout – Learn Flexbox & Grid for modern responsive layouts.">
+  <title>Lesson 15: Flexbox & Grid</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>📐 CSS Layouts</h1>
+    <h2>Lesson 15: Flexbox & Grid</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson14.html">⬅️ Lesson 14</a> |
+      <a href="lesson15.html" class="active">Lesson 15</a> |
+      <a href="lesson16.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🧩 Why Layout Matters</h3>
+      <p>Flexbox and Grid are modern CSS layout models that help you build responsive and efficient layouts without
+        hacks.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use Flexbox for 1D layouts (rows or columns), Grid for complex 2D
+        structures.</div>
+    </section>
+
+    <section class="flexbox-section animated-section">
+      <h3>➡️ Flexbox Essentials</h3>
+      <p>Flexbox makes it easy to align, distribute space, and reorder items:</p>
+      <pre><code>.container {
+  display: flex;
+  flex-direction: row; /* or column */
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use `justify-content` for distribution, `align-items` for cross-axis
+        alignment.</div>
+    </section>
+
+    <section class="grid-section animated-section">
+      <h3>➡️ Grid Essentials</h3>
+      <p>Grid gives you full control over rows and columns:</p>
+      <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}</code></pre>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use `repeat`, `fr`, and `grid-gap` for flexible layouts.</div>
+    </section>
+
+    <section class="demo-section animated-section">
+      <h3>🧪 Layout Demo</h3>
+      <pre><code>&lt;div class="container"&gt;
+  &lt;div class="box"&gt;1&lt;/div&gt;
+  &lt;div class="box"&gt;2&lt;/div&gt;
+  &lt;div class="box"&gt;3&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="grid-container"&gt;
+  &lt;div class="item"&gt;A&lt;/div&gt;
+  &lt;div class="item"&gt;B&lt;/div&gt;
+  &lt;div class="item"&gt;C&lt;/div&gt;
+  &lt;div class="item"&gt;D&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      <div class="tip-box"><strong>💡 Visual Tip:</strong> Use colored borders/background to understand spacing and
+        alignment.</div>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Interactive Testing</h3>
+      <a class="next-button" href="../test/index.html">Open Live CSS Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Flexbox for directional layout (row/column)</li>
+        <li>Grid for two-dimensional, complex layouts</li>
+        <li>Key properties: `justify-content`, `align-items`, `grid-template-columns`</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a responsive 3‑column card layout using Grid, and align items with
+        Flexbox inside each card.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 16, we'll dive into CSS animations and transitions—bring your pages to life!</p>
+      <a href="lesson16.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

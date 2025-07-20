@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 28: CSS Flexbox – Build 1D layouts, align items, and manage spacing with Flexbox.">
+  <title>Lesson 28: CSS Flexbox</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .flex-item {
+      background: var(--secondary);
+      padding: 1rem;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+      flex: 1 1 150px;
+    }
+
+    body.dark-mode .flex-item {
+      background: var(--primary);
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🔄 CSS Flexbox</h1>
+    <h2>Lesson 28: One-Dimensional Layouts</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson27.html">⬅️ Lesson 27</a> |
+      <a href="lesson28.html" class="active">Lesson 28</a> |
+      <a href="lesson29.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>📦 Why Flexbox?</h3>
+      <p>Flexbox simplifies one-dimensional layouts: rows or columns. Ideal for navbars, item alignment, and dynamic
+        sizing.</p>
+      <div class="tip-box"><strong>UX Tip:</strong> Use mobile-first → let items wrap naturally with `flex-wrap`.</div>
+    </section>
+
+    <section class="flex-basics animated-section">
+      <h3>➡️ Container & Items</h3>
+      <pre><code>.flex-container {
+  display: flex;
+  gap: 1rem;
+}
+.flex-item {
+  flex: 1;
+}</code></pre>
+      <div class="flex-container">
+        <div class="flex-item">A</div>
+        <div class="flex-item">B</div>
+        <div class="flex-item">C</div>
+      </div>
+      <p>Each item expands equally in the row.</p>
+    </section>
+
+    <section class="flex-align animated-section">
+      <h3>➡️ Alignment: `justify-content`, `align-items`</h3>
+      <pre><code>.container {
+  justify-content: space-between;
+  align-items: center;
+}</code></pre>
+      <p>Control spacing along main and cross axes for clean layouts.</p>
+    </section>
+
+    <section class="flex-order animated-section">
+      <h3>➡️ Ordering & Flex Grow</h3>
+      <pre><code>.item:first-child {
+  order: 2;
+}
+.item {
+  flex: 2 1 auto;
+}</code></pre>
+      <p>Change appearance order and relative sizes without altering HTML.</p>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try It Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Flexbox Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>`display: flex` enables flex context</li>
+        <li>`flex: [grow] [shrink] [basis]` manages sizing</li>
+        <li>Use `justify-content` and `align-items` for alignment</li>
+        <li>`order` and `flex-wrap` help layout distribution</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a responsive navbar with 4 links, centered logo, and wrap items on
+        mobile.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 29, we'll dive into **CSS Transitions & Animations** — add delightful motion to your pages! ✨</p>
+      <a href="lesson29.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

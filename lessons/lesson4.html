@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 4: Learn how to use HTML links to build navigation and connect content within your site and across the web.">
+  <meta name="keywords" content="HTML, links, anchor tag, navigation, internal link, external link, bookmark, href">
+  <meta name="author" content="LearnFrontend.dev">
+  <title>Lesson 4: Links and Navigation</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 4: Links and Navigation</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson3.html">⬅️ Lesson 3</a> |
+      <a href="lesson4.html" class="active">Lesson 4</a> |
+      <a href="lesson5.html">Next ➡️</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🔗 Why Are Links Important?</h3>
+      <p>Links are the lifeblood of the web. They connect web pages, guide users to more content, and let us build
+        navigation menus and site hierarchies. Without links, the "web" would just be... a page.</p>
+      <div class="tip-box">
+        <strong>💡 Did You Know?</strong> The <code>&lt;a&gt;</code> tag stands for “anchor” — it anchors one location
+        to another.
+      </div>
+    </section>
+
+    <section class="basic-link animated-section">
+      <h3>📎 Basic Link Structure</h3>
+      <pre><code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+      <p>
+        <code>href</code> is the "Hypertext REFerence" — it defines where the link points.
+      </p>
+      <ul>
+        <li><strong>External link:</strong> leads to another website</li>
+        <li><strong>Internal link:</strong> connects to another page in your site</li>
+      </ul>
+      <div class="note-box">
+        <strong>✅ Pro Tip:</strong> Make your link text meaningful — avoid generic labels like “click here.”
+      </div>
+    </section>
+
+    <section class="target-attribute animated-section">
+      <h3>🪟 Opening in a New Tab</h3>
+      <p>Add <code>target="_blank"</code> to open links in a new tab:</p>
+      <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Open in new tab&lt;/a&gt;</code></pre>
+      <div class="tip-box">
+        <strong>💡 Accessibility Tip:</strong> If a link opens in a new tab, make that clear to users visually or via
+        tooltip.
+      </div>
+    </section>
+
+    <section class="title-tooltip animated-section">
+      <h3>📝 Tooltips with <code>title</code></h3>
+      <p>
+        You can use the <code>title</code> attribute to add tooltips:
+      </p>
+      <pre><code>&lt;a href="about.html" title="Learn more about our team"&gt;About Us&lt;/a&gt;</code></pre>
+      <p>This is useful for extra context or accessibility.</p>
+    </section>
+
+    <section class="internal-links animated-section">
+      <h3>🏠 Internal Navigation</h3>
+      <p>
+        Use relative links to connect pages on your site:
+      </p>
+      <pre><code>&lt;a href="contact.html"&gt;Contact Page&lt;/a&gt;</code></pre>
+    </section>
+
+    <section class="bookmark-anchor animated-section">
+      <h3>📍 Bookmark Links (Jump to Section)</h3>
+      <p>Link to a specific section using an ID:</p>
+      <pre><code>&lt;a href="#faq"&gt;Go to FAQ&lt;/a&gt;
+...
+&lt;h2 id="faq"&gt;Frequently Asked Questions&lt;/h2&gt;</code></pre>
+      <div class="note-box">
+        <strong>Best Practice:</strong> Use unique, semantic IDs for anchors — it improves accessibility and linking.
+      </div>
+    </section>
+
+    <section class="linking-images-buttons animated-section">
+      <h3>🖼️ Linking Images or Buttons</h3>
+      <p>You can wrap almost any element in a link — including images or buttons:</p>
+      <pre><code>&lt;a href="index.html"&gt;
+  &lt;img src="logo.png" alt="Site Logo"&gt;
+&lt;/a&gt;
+
+&lt;a href="signup.html"&gt;
+  &lt;button&gt;Sign Up Now&lt;/button&gt;
+&lt;/a&gt;</code></pre>
+    </section>
+
+    <section class="nav-bar-demo animated-section">
+      <h3>📐 Building a Simple Navigation Bar</h3>
+      <pre><code>&lt;nav&gt;
+  &lt;a href="index.html"&gt;Home&lt;/a&gt;
+  &lt;a href="about.html"&gt;About&lt;/a&gt;
+  &lt;a href="contact.html"&gt;Contact&lt;/a&gt;
+  &lt;a href="#faq"&gt;FAQ&lt;/a&gt;
+&lt;/nav&gt;
+...
+&lt;section id="faq"&gt;
+  &lt;h2&gt;Frequently Asked Questions&lt;/h2&gt;
+&lt;/section&gt;</code></pre>
+    </section>
+
+    <section class="lesson-test">
+      <h3>🧪 Try It Yourself</h3>
+      <a class="next-button" href="../test/index.html">🧪 Open the Live Code Tester</a>
+    </section>
+
+    <section class="lesson-summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;a&gt;</code> is the tag used for creating links</li>
+        <li><code>href</code> defines the destination</li>
+        <li><code>target="_blank"</code> opens in a new tab</li>
+        <li><code>title</code> provides a hover tooltip</li>
+        <li>Use <code>id</code> for jump-to links within the page</li>
+        <li>You can wrap images and buttons in links for interaction</li>
+      </ul>
+      <div class="note-box">
+        <strong>Challenge:</strong> Build a horizontal nav bar with 4 working links and 1 anchor link. Make one open in
+        a new tab.
+      </div>
+    </section>
+
+    <section class="lesson-next">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 5</strong>, you'll explore images, audio, and video using HTML's powerful media tags.</p>
+      <a class="next-button" href="lesson3.html">⬅️ Previous Lesson</a>
+      <a class="next-button" href="../index.html">🏠 Home</a>
+      <a class="next-button" href="lesson5.html">➡️ Next Lesson</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

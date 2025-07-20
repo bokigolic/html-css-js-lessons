@@ -1,3 +1,6 @@
+/* === Google Font === */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
 /* === Root Variables === */
 :root {
   --background: #f8f9fa;
@@ -15,10 +18,16 @@ body.dark-mode {
   --shadow: rgba(255, 255, 255, 0.05);
 }
 
-/* === Base Styling === */
+/* === Base === */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.4s ease, color 0.4s ease;
@@ -63,23 +72,29 @@ body {
 .hero {
   text-align: center;
   padding: 4rem 1rem;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, #0d6efd, #6610f2);
   color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
   box-shadow: 0 4px 15px var(--shadow);
 }
 
-/* === Cards === */
+/* === Buttons & Cards === */
 .next-button {
   display: block;
   padding: 1.5rem;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   text-decoration: none;
   color: var(--text);
-  perspective: 800px;
-  will-change: transform;
+}
+
+.next-button:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.04);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.15);
 }
 
 body.dark-mode .next-button {
@@ -87,12 +102,7 @@ body.dark-mode .next-button {
   color: white;
 }
 
-.next-button:hover {
-  transform: scale(1.04) rotateX(3deg) rotateY(-3deg);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-/* === Toggle Theme Button === */
+/* === Theme Toggle === */
 .toggle-theme {
   position: fixed;
   top: 1rem;
@@ -111,14 +121,8 @@ body.dark-mode .next-button {
   background: var(--secondary);
 }
 
-/* === Lesson Page Styling === */
-.lesson-intro,
-.lesson-structure,
-.lesson-tags,
-.lesson-best-practices,
-.lesson-summary,
-.lesson-next,
-.lesson-animations {
+/* === Lesson Box === */
+.lesson-box {
   background-color: rgba(255, 255, 255, 0.8);
   margin: 2rem auto;
   padding: 2rem;
@@ -128,26 +132,15 @@ body.dark-mode .next-button {
   transition: background-color 0.3s ease;
 }
 
-body.dark-mode .lesson-intro,
-body.dark-mode .lesson-structure,
-body.dark-mode .lesson-tags,
-body.dark-mode .lesson-best-practices,
-body.dark-mode .lesson-summary,
-body.dark-mode .lesson-next,
-body.dark-mode .lesson-animations {
+body.dark-mode .lesson-box {
   background-color: #1a1a1a;
 }
 
-.lesson-intro h3,
-.lesson-structure h3,
-.lesson-tags h3,
-.lesson-summary h3,
-.lesson-best-practices h3,
-.lesson-animations h3 {
+.lesson-box h3 {
   color: var(--primary);
 }
 
-/* === Custom Boxes === */
+/* === Tips & Notes === */
 .example-box,
 .tip-box,
 .note-box,
@@ -180,7 +173,7 @@ body.dark-mode td {
   background: #222;
 }
 
-/* === Preformatted Code === */
+/* === Code Blocks === */
 pre {
   background-color: #f4f4f4;
   padding: 1rem;
@@ -194,7 +187,25 @@ body.dark-mode pre {
   color: #eee;
 }
 
-/* === Animations and Transitions === */
+pre code {
+  display: block;
+  background-color: #333;
+  color: #f8f8f2;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: Consolas, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode pre code {
+  background-color: #222;
+  color: #e0e0e0;
+}
+
+/* === Animations === */
 main {
   transition: opacity 0.6s ease;
 }
@@ -214,7 +225,7 @@ main {
   }
 }
 
-/* === Responsive Design === */
+/* === Responsive === */
 @media (max-width: 768px) {
   .next-button {
     width: 90% !important;
@@ -224,20 +235,10 @@ main {
   }
 }
 
-pre code {
-  display: block;
-  background-color: #333;
-  color: #f8f8f2; /* svetla boja za čitljivost */
-  padding: 1rem;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: Consolas, monospace;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-body.dark-mode pre code {
-  background-color: #222;
-  color: #e0e0e0;
+.course-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
 }

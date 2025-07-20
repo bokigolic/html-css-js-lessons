@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 11: Accessibility & SEO Basics – Learn how to make accessible, search-engine-friendly web pages." />
+  <meta name="robots" content="index, follow" />
+  <title>Lesson 11: Accessibility & SEO Basics</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>📢 Accessibility & SEO Basics</h1>
+    <h2>Lesson 11</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson10.html">⬅️ Prev</a> |
+      <a href="lesson11.html" class="active">Lesson 11</a> |
+      <a href="lesson12.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🧠 What are Accessibility & SEO?</h3>
+      <p>Accessibility means making your site usable for everyone – including people with disabilities. SEO means
+        helping search engines understand your content so it appears in search results.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Accessible sites often rank better in search engines 🎯</div>
+    </section>
+
+    <section class="accessibility-tags animated-section">
+      <h3>🔖 Semantic & ARIA Tags</h3>
+      <ul>
+        <li><code>alt</code> text for images</li>
+        <li><code>aria-label</code> or <code>aria-hidden</code> for icons/buttons</li>
+        <li><code>role="navigation"</code>, <code>role="main"</code>, etc.</li>
+        <li>Proper heading structure (<code>&lt;h1&gt;</code> → <code>&lt;h2&gt;</code> → …)</li>
+      </ul>
+      <pre><code>&lt;img src="logo.png" alt="Company Logo"&gt;
+&lt;button aria-label="Open menu"&gt;☰&lt;/button&gt;
+&lt;nav role="navigation"&gt;…&lt;/nav&gt;</code></pre>
+      <div class="tip-box">💡 Make sure decorative images use <code>alt=""</code> to skip them in screen readers.</div>
+    </section>
+
+    <section class="seo-metadata animated-section">
+      <h3>📦 SEO Meta Basics</h3>
+      <ul>
+        <li><code>&lt;html lang="en"&gt;</code> – defines language for screen-readers and SEO</li>
+        <li><code>&lt;meta charset="UTF-8"&gt;</code> – ensures correct text encoding</li>
+        <li><code>&lt;meta name="description"&gt;</code> – preview text in search results</li>
+        <li><code>title</code> – shown in browser tab & search engine title</li>
+      </ul>
+      <pre><code>&lt;meta name="description" content="Short, clear overview of page content"&gt;
+&lt;title&gt;Lesson 11: Accessibility & SEO Basics&lt;/title&gt;</code></pre>
+    </section>
+
+    <section class="accessibility-structure animated-section">
+      <h3>🏗️ Headings & Landmark Roles</h3>
+      <p>Use headings for structure and define landmarks to help navigation:</p>
+      <pre><code>&lt;header role="banner"&gt;…&lt;/header&gt;
+&lt;main role="main"&gt;…&lt;/main&gt;
+&lt;footer role="contentinfo"&gt;…&lt;/footer&gt;</code></pre>
+      <div class="note-box">⚠️ Ensure you only have one <code>&lt;h1&gt;</code> on a page for clarity.</div>
+    </section>
+
+    <section class="practical-example animated-section">
+      <h3>🧪 Example: Accessible Image & Links</h3>
+      <pre><code>&lt;img src="team.jpg" alt="Three team members smiling" /&gt;
+&lt;a href="about.html" aria-label="Learn more about our team"&gt;About Us&lt;/a&gt;</code></pre>
+      <div class="tip-box">💡 Screen readers will read the <code>aria-label</code> instead of link text.</div>
+    </section>
+
+    <section class="lesson-test animated-section">
+      <h3>🧪 Live Code Tester</h3>
+      <a class="next-button" href="../test/index.html">Test Accessibility Awareness</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Always use meaningful <code>alt</code> text or <code>aria-hidden</code> when appropriate</li>
+        <li>Include landmark roles and logical heading hierarchy</li>
+        <li>Ensure meta tags: <code>charset</code>, <code>description</code>, <code>viewport</code></li>
+        <li>Language, structure & readability help both users and SEO</li>
+      </ul>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next: Embedding Content</h3>
+      <p>Lesson 12 will cover integrating rich content—iframes, videos, maps, and more.</p>
+      <a href="lesson12.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lesson 29: CSS Transitions & Animations – Bring your site to life with motion.">
+  <title>Lesson 29: CSS Transitions & Animations</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .demo-box {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      margin: 2rem auto;
+      width: 200px;
+      text-align: center;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .demo-box:hover {
+      transform: scale(1.1) rotate(2deg);
+      background: var(--secondary);
+    }
+
+    .animation-box {
+      width: 100px;
+      height: 100px;
+      background: var(--secondary);
+      margin: 2rem auto;
+      animation: bounce 2s infinite alternate;
+      border-radius: 8px;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>✨ CSS Transitions & Animations</h1>
+    <h2>Lesson 29: Add Motion to Your Pages</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson28.html">⬅️ Lesson 28</a> |
+      <a href="lesson29.html" class="active">Lesson 29</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>Why Animations?</h3>
+      <p>Animations enhance the user experience by providing feedback and guiding attention. They can make your
+        interface feel more natural and engaging.</p>
+      <div class="tip-box"><strong>UX Tip:</strong> Use subtle motion—too much can distract users rather than delight
+        them.</div>
+    </section>
+
+    <section class="transitions animated-section">
+      <h3>➡️ CSS Transitions</h3>
+      <pre><code>.demo-box {
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.demo-box:hover {
+  transform: scale(1.1);
+  background: var(--secondary);
+}</code></pre>
+      <div class="demo-box">Hover Me</div>
+      <p>Smoothly animate between states like hover without writing JS.</p>
+    </section>
+
+    <section class="animations animated-section">
+      <h3>➡️ CSS Animations with @keyframes</h3>
+      <pre><code>@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
+.animation-box {
+  animation: bounce 2s infinite alternate;
+}</code></pre>
+      <div class="animation-box"></div>
+      <p>Create repeating motions like bouncing, sliding, fading, and more.</p>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try It Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Animations Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><strong>transition</strong> for simple state changes (hover, focus)</li>
+        <li><strong>@keyframes</strong> + <code>animation</code> for complex motion sequences</li>
+        <li>Control timing, easing, duration, iteration count</li>
+        <li>Keep things subtle and performance-friendly</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Add a fade-in effect to images and make buttons animate on hover (color,
+        shadow, scale).
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>Congratulations!</h3>
+      <p>You’ve reached the end of the HTML & CSS core series. What's next? You can explore JavaScript lessons to add
+        functionality or build a full project combining animation, layout, and interactivity.</p>
+      <a class="next-button" href="../javascript/lesson1.html">➡️ Start JavaScript</a>
+      <a class="next-button" href="../index.html">🏠 Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

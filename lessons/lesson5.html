@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 5: Images and Multimedia – Learn how to embed images, video, and audio with best practices for accessibility, performance, and styling.">
+  <meta name="keywords" content="HTML, image, video, audio, multimedia, responsive, accessibility, alt text">
+  <meta name="author" content="LearnFrontend.dev">
+  <title>Lesson 5: Images and Multimedia</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle dark mode">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 5: Images and Multimedia</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson4.html">⬅️ Lesson 4</a> |
+      <a href="lesson5.html" class="active">Lesson 5</a> |
+      <a href="lesson6.html">Next ➡️</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🖼️ Why Images and Multimedia Matter</h3>
+      <p>Media brings websites to life. 📷 Well-used images, 🎥 videos, and 🎧 audio deliver richer experiences, boost
+        engagement, and help tell stories more effectively.</p>
+      <div class="tip-box">
+        <strong>💡 Pro Tip:</strong> Always optimize media assets for size and performance—nobody likes slow-loading
+        pages!
+      </div>
+    </section>
+
+    <section class="images-basic animated-section">
+      <h3>📷 Adding Images with <code>&lt;img&gt;</code></h3>
+      <p>Use the <code>&lt;img&gt;</code> tag to embed images:</p>
+      <pre><code>&lt;img src="cat.jpg" alt="Cute smiling cat" /&gt;</code></pre>
+      <ul>
+        <li><code>src</code> – image location (relative or absolute URL)</li>
+        <li><code>alt</code> – descriptive text for screen readers and when images fail to load</li>
+      </ul>
+      <div class="note-box">
+        <strong>Accessibility:</strong> Good <code>alt</code> text is crucial for users with visual impairment.
+      </div>
+    </section>
+
+    <section class="responsive-images animated-section">
+      <h3>📱 Making Images Responsive</h3>
+      <p>Ensure your images scale well on any device:</p>
+      <pre><code>&lt;img src="landscape.jpg" alt="Mountain landscape" style="max-width:100%;height:auto;" /&gt;</code></pre>
+      <div class="tip-box">
+        <strong>SEO Tip:</strong> Smaller, responsive images improve load speed and search engine rankings.
+      </div>
+    </section>
+
+    <section class="gallery-example animated-section">
+      <h3>🖼️ Mini Image Gallery Example</h3>
+      <pre><code>&lt;h2&gt;My Travel Gallery&lt;/h2&gt;
+&lt;div class="gallery"&gt;
+  &lt;img src="rome.jpg" alt="Colosseum, Rome" width="300" /&gt;
+  &lt;img src="paris.jpg" alt="Eiffel Tower at night" width="300" /&gt;
+  &lt;img src="nyc.jpg" alt="New York skyline" width="300" /&gt;
+&lt;/div&gt;</code></pre>
+      <div class="note-box">
+        <strong>Performance Tip:</strong> Use modern formats like <code>WebP</code> and lazy loading for faster load
+        times.
+      </div>
+    </section>
+
+    <section class="video animated-section">
+      <h3>🎥 Embedding Video with <code>&lt;video&gt;</code></h3>
+      <p>Use the <code>&lt;video&gt;</code> tag with controls and fallback content:</p>
+      <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="intro.mp4" type="video/mp4" /&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+      <ul>
+        <li><code>controls</code> – show player interface</li>
+        <li><code>autoplay</code>, <code>loop</code>, <code>muted</code> – additional behaviors</li>
+      </ul>
+      <div class="tip-box">
+        <strong>📌 Note:</strong> Add captions or transcripts for accessibility and SEO benefits.
+      </div>
+    </section>
+
+    <section class="audio animated-section">
+      <h3>🎧 Embedding Audio with <code>&lt;audio&gt;</code></h3>
+      <p>Play audio using the <code>&lt;audio&gt;</code> tag:</p>
+      <pre><code>&lt;audio controls&gt;
+  &lt;source src="soundtrack.mp3" type="audio/mpeg" /&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+      <div class="note-box">
+        <strong>Accessibility:</strong> Provide captioning or transcripts for audio content.
+      </div>
+    </section>
+
+    <section class="media-practice animated-section">
+      <h3>🧪 Practice: Media Showcase</h3>
+      <p>Create a media showcase using all three formats:</p>
+      <pre><code>&lt;h2&gt;🎮 My Media Showcase&lt;/h2&gt;
+&lt;img src="console.jpg" alt="Gaming console" /&gt;
+&lt;video src="gameplay.mp4" controls muted loop&gt;&lt;/video&gt;
+&lt;audio src="game-music.mp3" controls&gt;&lt;/audio&gt;</code></pre>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;img&gt;</code>: images with <code>alt</code> are essential for accessibility</li>
+        <li>Use style or responsive attributes for flexible design</li>
+        <li><code>&lt;video&gt;</code> and <code>&lt;audio&gt;</code>: add player controls and captions</li>
+        <li>Optimize media for performance: formats, compression, lazy-load</li>
+      </ul>
+      <div class="note-box">
+        <strong>Challenge:</strong> Build a profile page with a responsive photo, intro video, and background audio.
+      </div>
+    </section>
+
+    <section class="lesson-test animated-section">
+      <h3>🧪 Try It Yourself</h3>
+      <a class="next-button" href="../test/index.html">🧪 Open Live Tester</a>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In <strong>Lesson 6</strong>, we’ll explore lists: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, and
+        <code>&lt;dl&gt;</code>.</p>
+      <a class="next-button" href="lesson4.html">⬅️ Previous Lesson</a>
+      <a class="next-button" href="../index.html">🏠 Home</a>
+      <a class="next-button" href="lesson6.html">➡️ Next Lesson</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

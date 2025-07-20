@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 17: CSS Variables & Theming – Learn custom properties and build dynamic themes.">
+  <title>Lesson 17: CSS Variables & Theming</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .theme-box {
+      width: 120px;
+      height: 120px;
+      margin: 0.5rem;
+      display: inline-block;
+      background-color: var(--primary);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🎨 CSS Theming</h1>
+    <h2>Lesson 17: Variables & Theming</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson16.html">⬅️ Lesson 16</a> |
+      <a href="lesson17.html" class="active">Lesson 17</a> |
+      <a href="lesson18.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>📦 What Are CSS Variables?</h3>
+      <p>CSS variables (custom properties) let you store values once and reuse them, making theming and maintenance
+        easy.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Define variables in <code>:root</code> for global usage.</div>
+    </section>
+
+    <section class="variable-basics animated-section">
+      <h3>➡️ Defining Variables</h3>
+      <pre><code>:root {
+  --primary: #0d6efd;
+  --secondary: #6c757d;
+  --background: #ffffff;
+  --text: #212529;
+}</code></pre>
+      <p>Use them with <code>var(--primary)</code> inside your CSS.</p>
+    </section>
+
+    <section class="variable-usage animated-section">
+      <h3>➡️ Using Variables</h3>
+      <pre><code>body {
+  background-color: var(--background);
+  color: var(--text);
+}
+button {
+  background-color: var(--primary);
+  color: white;
+}</code></pre>
+      <div class="tip-box"><strong>UX Tip:</strong> Changing a single variable updates the whole theme.</div>
+    </section>
+
+    <section class="theme-switch animated-section">
+      <h3>🎛️ Theme Switcher Demo</h3>
+      <p>Click a box below to switch theme:</p>
+      <div id="themes">
+        <div class="theme-box" data-bg="#ffffff" data-text="#212529" data-primary="#0d6efd">Light</div>
+        <div class="theme-box" data-bg="#121212" data-text="#f1f1f1" data-primary="#66b2ff">Dark</div>
+        <div class="theme-box" data-bg="#faf0e6" data-text="#333333" data-primary="#ff6347">Warm</div>
+      </div>
+      <script>
+        document.querySelectorAll('.theme-box').forEach(box => {
+          box.addEventListener('click', () => {
+            const root = document.documentElement;
+            root.style.setProperty('--background', box.dataset.bg);
+            root.style.setProperty('--text', box.dataset.text);
+            root.style.setProperty('--primary', box.dataset.primary);
+          });
+        });
+      </script>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live CSS Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Declare variables using <code>--custom-name</code> in <code>:root</code></li>
+        <li>Use them with <code>var(--custom-name)</code></li>
+        <li>Update values dynamically for theming</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Add a third “Warm” theme and a button that cycles through themes automatically
+        every 5 seconds.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 18, we'll explore responsive design techniques—media queries and mobile-first! 📱</p>
+      <a href="lesson18.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

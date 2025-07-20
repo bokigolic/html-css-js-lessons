@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lesson 27: CSS Grid Layout – Learn how to build powerful 2D layouts with CSS Grid.">
+  <title>Lesson 27: CSS Grid Layout</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .grid-item {
+      background: var(--secondary);
+      padding: 1.5rem;
+      text-align: center;
+      border-radius: 8px;
+      color: white;
+    }
+
+    body.dark-mode .grid-item {
+      background: var(--primary);
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🔲 CSS Grid Layout</h1>
+    <h2>Lesson 27: 2D Layout with CSS Grid</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson26.html">⬅️ Lesson 26</a> |
+      <a href="lesson27.html" class="active">Lesson 27</a> |
+      <a href="lesson28.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>📐 Why CSS Grid?</h3>
+      <p>CSS Grid lets you build flexible, two-dimensional layouts easily — perfect for cards, galleries, or full-page
+        layouts.</p>
+      <div class="tip-box"><strong>UX Tip:</strong> Mobile-first → let items wrap naturally with `auto-fit`.</div>
+    </section>
+
+    <section class="grid-basics animated-section">
+      <h3>➡️ Grid Container & Items</h3>
+      <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}</code></pre>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+      <p>Three equal columns, items flow row by row with consistent gaps.</p>
+    </section>
+
+    <section class="grid-auto animated-section">
+      <h3>➡️ Responsive with `auto-fit`</h3>
+      <pre><code>grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));</code></pre>
+      <p>Grid adapts to screen size — columns adjust automatically!</p>
+    </section>
+
+    <section class="grid-placement animated-section">
+      <h3>➡️ Placing Items Manually</h3>
+      <pre><code>.item-a {
+  grid-column: 1 / span 2;
+  grid-row: 1 / 3;
+}</code></pre>
+      <p>Make elements span multiple rows/columns for flexible layouts.</p>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try It Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live CSS Grid Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>`display: grid` to create container</li>
+        <li>Use `grid-template-columns` & `gap` for layout control</li>
+        <li>`auto-fit` + `minmax` = responsive grids</li>
+        <li>Use `grid-column` / `grid-row` for custom placement</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a 4‑card layout that adapts to mobile (1 column), tablet (2 columns),
+        desktop (4), and spans a featured card across two columns.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 28, we'll explore **CSS Flexbox** — perfect for 1D layouts and alignment! 🔄</p>
+      <a href="lesson28.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

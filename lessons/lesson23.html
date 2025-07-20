@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 23: CSS Grid Layout – Learn how to create powerful responsive layouts using CSS Grid.">
+  <title>Lesson 23: CSS Grid Layout</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    @media (min-width: 600px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .grid-item {
+      background: var(--secondary);
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>🧩 CSS Grid Layout</h1>
+    <h2>Lesson 23: Grid Basics</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson22.html">⬅️ Lesson 22</a> |
+      <a href="lesson23.html" class="active">Lesson 23</a> |
+      <a href="lesson24.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🗺️ What Is CSS Grid?</h3>
+      <p>CSS Grid lets you create complex two-dimensional layouts with rows and columns—perfect for modern design.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Think of grid like a spreadsheet—you define rows and columns, then
+        place items.</div>
+    </section>
+
+    <section class="grid-basics animated-section">
+      <h3>➡️ Basic Grid Setup</h3>
+      <pre><code>.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}</code></pre>
+      <p>Use `1fr` to divide available space equally; `gap` controls spacing between items.</p>
+    </section>
+
+    <section class="demo-grid animated-section">
+      <h3>➡️ Live Demo Grid</h3>
+      <div class="grid-container">
+        <div class="grid-item">Item 1</div>
+        <div class="grid-item">Item 2</div>
+        <div class="grid-item">Item 3</div>
+        <div class="grid-item">Item 4</div>
+        <div class="grid-item">Item 5</div>
+      </div>
+      <div class="tip-box"><strong>UX Tip:</strong> Combine grid with media queries for responsive layouts.</div>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Grid Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Turn on grid with `display: grid`.</li>
+        <li>Define columns with `grid-template-columns`.</li>
+        <li>Use `gap` for spacing.</li>
+        <li>Responsive layouts need media queries + grid adjustments.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a gallery layout: 1 column on mobile, 2 on tablet, 4 on desktop using CSS
+        Grid.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 24, we'll explore Flexbox – ideal for one-dimensional layouts! 🔧</p>
+      <a href="lesson24.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

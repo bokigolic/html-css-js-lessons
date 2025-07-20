@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Lesson 9: Semantic HTML – Learn how to use meaningful HTML tags for better structure, accessibility, and SEO." />
+  <title>Lesson 9: Semantic HTML</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" href="../favicon.ico" />
+</head>
+
+<body class="dark-mode">
+  <!-- Loader + Theme toggle -->
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙 Toggle Theme</button>
+
+  <header class="main-header">
+    <h1>📘 HTML Course for Beginners</h1>
+    <h2>Lesson 9: Semantic HTML</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson8.html">⬅️ Lesson 8</a> |
+      <a href="lesson9.html" class="active">Lesson 9</a> |
+      <a href="lesson10.html">➡️ Lesson 10</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🧠 What is Semantic HTML?</h3>
+      <p>Semantic HTML uses tags that describe meaning and context—like `
+      <header>`, `<article>`, and `<footer>`. This helps browsers, developers, and assistive technologies understand
+            your content better.</p>
+            <div class="tip-box"><strong>Why it matters:</strong> Enhances SEO, accessibility, and code organization.
+            </div>
+    </section>
+
+    <section class="semantic-tags animated-section">
+      <h3>📦 Common Semantic Tags</h3>
+      <ul>
+        <li><code>&lt;header&gt;</code> – top section of page or area</li>
+        <li><code>&lt;nav&gt;</code> – navigation links</li>
+        <li><code>&lt;main&gt;</code> – main unique content</li>
+        <li><code>&lt;section&gt;</code> – thematic grouping</li>
+        <li><code>&lt;article&gt;</code> – independent piece (e.g. blog post)</li>
+        <li><code>&lt;aside&gt;</code> – side notes, related links</li>
+        <li><code>&lt;footer&gt;</code> – bottom section of page or area</li>
+      </ul>
+    </section>
+
+    <section class="example-layout animated-section">
+      <h3>🖼️ Example: Page Structure</h3>
+      <pre><code>&lt;header&gt;
+  &lt;h1&gt;My Blog&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;Posts&lt;/a&gt;
+&lt;/nav&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Learning HTML&lt;/h2&gt;
+    &lt;p&gt;HTML is the skeleton of the web.&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;aside&gt;
+    &lt;h3&gt;Tip&lt;/h3&gt;
+    &lt;p&gt;Use semantic tags for better structure!&lt;/p&gt;
+  &lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;© 2025 LearnFrontend.dev&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+    </section>
+
+    <section class="semantics-benefits animated-section">
+      <h3>✅ Why It’s Valuable</h3>
+      <ul>
+        <li>🔍 Better SEO and indexing</li>
+        <li>🧏 Improved screen-reader navigation</li>
+        <li>🛠️ Easier for devs to read & maintain</li>
+        <li>📐 Clear document structure/outline</li>
+      </ul>
+    </section>
+
+    <section class="practice animated-section">
+      <h3>🧪 Practice Time</h3>
+      <p>Use semantic tags to build a small blog layout:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code> with title</li>
+        <li><code>&lt;nav&gt;</code> with two links</li>
+        <li><code>&lt;main&gt;</code> containing an <code>&lt;article&gt;</code></li>
+        <li><code>&lt;aside&gt;</code> for extra tips</li>
+        <li><code>&lt;footer&gt;</code> with copy info</li>
+      </ul>
+    </section>
+
+    <section class="lesson-test animated-section">
+      <h3>🧪 Try It Yourself</h3>
+      <a class="next-button" href="../test/index.html">🧪 Open Live Code Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Use semantic tags for meaning and structure</li>
+        <li>Tags include `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`</li>
+        <li>Improves SEO, accessibility, and readability</li>
+      </ul>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>🎉 HTML Complete!</h3>
+      <p>Congrats—you’ve mastered HTML fundamentals! Next stop: 🎨 CSS to bring your pages to life.</p>
+      <a class="next-button" href="lesson10.html">➡️ Next: CSS Basics</a>
+      <a class="next-button" href="../index.html">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>

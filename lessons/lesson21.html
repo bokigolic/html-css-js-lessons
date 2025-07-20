@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Lesson 21: CSS Variables & Animations – Learn how to use CSS custom properties and keyframe animations.">
+  <title>Lesson 21: CSS Variables & Animations</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../favicon.ico">
+  <style>
+    :root {
+      --primary: #66b2ff;
+      --secondary: #adb5bd;
+      --highlight: #ffdd57;
+      --text: var(--text);
+      --bg: var(--background);
+    }
+
+    .demo-box {
+      width: 100px;
+      height: 100px;
+      background: var(--highlight);
+      margin: 2rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+      }
+    }
+  </style>
+</head>
+
+<body class="dark-mode">
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
+  <button class="toggle-theme" aria-label="Toggle theme">🌙</button>
+
+  <header class="main-header">
+    <h1>✨ CSS Variables & Animations</h1>
+    <h2>Lesson 21: Variables & Animations</h2>
+    <nav>
+      <a href="../index.html">🏠 Home</a> |
+      <a href="lesson20.html">⬅️ Lesson 20</a> |
+      <a href="lesson21.html" class="active">Lesson 21</a> |
+      <a href="lesson22.html">➡️ Next</a>
+    </nav>
+  </header>
+
+  <main style="opacity: 0;">
+    <section class="lesson-intro animated-section">
+      <h3>🧩 What Are CSS Variables?</h3>
+      <p>CSS variables (custom properties) let you store values in `--your-var` and reuse them across your stylesheet.
+      </p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Think of variables like global theme constants—change once, update
+        everywhere!</div>
+    </section>
+
+    <section class="variables-basics animated-section">
+      <h3>➡️ Declaring & Using Variables</h3>
+      <pre><code>:root {
+  --main-color: #66b2ff;
+}
+.button {
+  background: var(--main-color);
+}</code></pre>
+      <p>You declare a variable in `:root` and access it with `var(--var-name)`.</p>
+    </section>
+
+    <section class="scope-example animated-section">
+      <h3>➡️ Variable Scope</h3>
+      <pre><code>.card {
+  --card-padding: 1.5rem;
+  padding: var(--card-padding);
+}</code></pre>
+      <p>Variables respect CSS scope—declaring inside a selector makes it local to its descendants.</p>
+    </section>
+
+    <section class="animations-intro animated-section">
+      <h3>🕺 What Are CSS Animations?</h3>
+      <p>Animations let you change CSS properties smoothly over time using `@keyframes` and `animation:` rules.</p>
+      <div class="tip-box"><strong>💡 Tip:</strong> Use animations to draw attention—but don’t go overboard!</div>
+    </section>
+
+    <section class="animation-demo animated-section">
+      <h3>➡️ Live Animation Example</h3>
+      <div class="demo-box">✨</div>
+      <p style="text-align:center;">This box *pulses* using `@keyframes` and `animation`.</p>
+    </section>
+
+    <section class="live-practice animated-section">
+      <h3>🧪 Try Live</h3>
+      <a class="next-button" href="../test/index.html">Open Live Animation Tester</a>
+    </section>
+
+    <section class="lesson-summary animated-section">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>CSS variables start with `--` and are retrieved with `var()`.</li>
+        <li>Declare them in `:root` for global or inside selectors for scoped use.</li>
+        <li>`@keyframes` defines animation steps; `animation:` applies them.</li>
+        <li>You can control duration, easing, delay, iteration, and direction.</li>
+      </ul>
+      <div class="note-box">
+        <strong>Mini Challenge:</strong> Build a button that changes color on hover using variables and gently shakes on
+        click with animation.
+      </div>
+    </section>
+
+    <section class="lesson-next animated-section">
+      <h3>➡️ Coming Up Next</h3>
+      <p>In Lesson 22, we'll explore responsive design using media queries and mobile-first principles! 📱</p>
+      <a href="lesson22.html" class="next-button">➡️ Next Lesson</a>
+      <a href="../index.html" class="next-button">⬅️ Back to Home</a>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 LearnFrontend.dev — All rights reserved</p>
+  </footer>
+
+  <script src="../loader.js"></script>
+  <script src="../theme-toggle.js"></script>
+  <script src="../transitions.js"></script>
+</body>
+
+</html>
