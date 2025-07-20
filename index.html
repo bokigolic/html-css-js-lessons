@@ -5,50 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Learn frontend development: HTML, CSS, JavaScript courses for beginners." />
-  <meta name="keywords" content="HTML, CSS, JavaScript, frontend, tutorials, web development" />
-  <meta name="author" content="LearnFrontend.dev" />
   <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="style.css" />
-  <title>LearnFrontend.dev</title>
+  <title>Learn Frontend</title>
 </head>
 
 <body class="dark-mode">
+  <div data-include="partials/header.html"></div>
+
   <div id="loader">
     <div class="spinner"></div>
   </div>
 
-  <button class="toggle-theme" aria-label="Toggle Theme">🌙 Toggle Theme</button>
 
-  <!-- Global Header Include -->
+
   <div data-include="partials/header.html"></div>
 
   <section class="hero">
-    <p>Build. Learn. Create.</p>
-    <p>Choose your path and start learning today!</p>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Build. Learn. Create.</h1>
+      <p>Master HTML, CSS & JavaScript and launch your frontend career.</p>
+      <a href="lessons/lesson1.html" class="cta-button">Start Learning</a>
+    </div>
   </section>
 
-  <main style="opacity: 0;">
-    <section>
-      <h3 style="text-align: center;">🎓 Choose a Course to Begin</h3>
+  <main class="container">
+    <section class="course-overview">
+      <h2>🎓 Courses</h2>
       <div class="course-cards">
-        <a href="lessons/lesson1.html" class="next-button">
-          <h3>📘 HTML & 🎨 CSS</h3>
+        <a href="lessons/lesson1.html" class="card">
+          <h3>HTML & CSS</h3>
+          <p>Beginner‑friendly lessons</p>
         </a>
-        <a href="#" class="next-button">
-          <h3>⚙️ JavaScript</h3>
+        <a href="lessons/js/index.html" class="card">
+          <h3>JavaScript</h3>
+          <p>DOM, APIs & interactivity</p>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Global Footer Include -->
   <div data-include="partials/footer.html"></div>
 
   <!-- Scripts -->
-  <script src="js/includes.js"></script>
-  <script src="loader.js"></script>
-  <script src="theme-toggle.js"></script>
-  <script src="transitions.js"></script>
+  <script src="js/includes.js" defer></script>
+  <script src="loader.js" defer></script>
+  <script src="transitions.js" defer></script>
 </body>
 
 </html>

@@ -31,11 +31,11 @@
   <main style="opacity: 0;">
     <section class="lesson-intro animated-section">
       <h3>📨 What Are Forms?</h3>
-      <p>Forms collect user input—login info, comments, surveys, and more. They're essential for making your site
-        interactive.</p>
+      <p>Forms are used to collect user input — from login info to survey responses. They are the main way users
+        interact with your backend.</p>
       <div class="tip-box">
-        <strong>💡 Accessibility Tip:</strong> Always use `<label>` linked to inputs—it helps screen readers and
-          improves usability.
+        <strong>💡 Accessibility Tip:</strong> Always use <code>&lt;label&gt;</code> linked to inputs for better screen
+        reader support.
       </div>
     </section>
 
@@ -46,87 +46,67 @@
   &lt;input type="text" id="name" name="name" required /&gt;
   &lt;button type="submit"&gt;Submit&lt;/button&gt;
 &lt;/form&gt;</code></pre>
-      <p><strong>Note:</strong> `action` tells the browser where to send data, `method="post"` keeps it secure.</p>
+      <p><strong>Note:</strong> <code>action</code> specifies where to send the data, and <code>method="post"</code>
+        hides it from URL.</p>
     </section>
 
     <section class="input-types animated-section">
-      <h3>🔢 Common Input Types</h3>
+      <h3>🔢 Input Types</h3>
       <ul>
-        <li><code>text</code> – Free text</li>
-        <li><code>password</code> – Masked input</li>
-        <li><code>email</code> – Validated email format</li>
-        <li><code>checkbox</code> – Multiple selections</li>
-        <li><code>radio</code> – Single choice group</li>
-        <li><code>submit</code> – Submit button</li>
+        <li><code>text</code> – Plain input</li>
+        <li><code>email</code> – Email validation</li>
+        <li><code>password</code> – Hidden characters</li>
+        <li><code>checkbox</code> – Multiple choices</li>
+        <li><code>radio</code> – Single choice</li>
+        <li><code>submit</code> – Send form</li>
       </ul>
       <pre><code>&lt;input type="email" id="email" name="email" required /&gt;
-&lt;input type="checkbox" id="subscribe" name="subscribe" /&gt;
-&lt;label for="subscribe"&gt;Subscribe to newsletter&lt;/label&gt;</code></pre>
-      <div class="tip-box"><strong>💡 UX Tip:</strong> Use `required`, `placeholder`, and validation patterns to guide
-        users.</div>
+&lt;label for="subscribe"&gt;
+  &lt;input type="checkbox" id="subscribe" name="subscribe" /&gt;
+  Subscribe to newsletter
+&lt;/label&gt;</code></pre>
     </section>
 
-    <section class="labels-textarea animated-section">
-      <h3>📝 Labels and Textareas</h3>
-      <pre><code>&lt;label for="bio"&gt;Your bio:&lt;/label&gt;
-&lt;textarea id="bio" name="bio" rows="4" cols="30" required&gt;&lt;/textarea&gt;</code></pre>
-      <p><strong>Tip:</strong> Use `<textarea>` for multi-line input—users appreciate the space.</p>
-    </section>
+    <section class="textarea-select animated-section">
+      <h3>📝 Textareas and Dropdowns</h3>
+      <pre><code>&lt;label for="bio"&gt;Bio:&lt;/label&gt;
+&lt;textarea id="bio" name="bio" rows="4"&gt;&lt;/textarea&gt;
 
-    <section class="select-dropdown animated-section">
-      <h3>📋 Dropdown Menus</h3>
-      <pre><code>&lt;label for="country"&gt;Country:&lt;/label&gt;
+&lt;label for="country"&gt;Country:&lt;/label&gt;
 &lt;select id="country" name="country"&gt;
-  &lt;option value="" disabled selected&gt;Choose…&lt;/option&gt;
-  &lt;option value="us"&gt;United States&lt;/option&gt;
-  &lt;option value="de"&gt;Germany&lt;/option&gt;
-  &lt;option value="ba"&gt>Bosnia &amp; Herzegovina&lt;/option&gt;
+  &lt;option&gt;Choose one...&lt;/option&gt;
+  &lt;option value="us"&gt;USA&lt;/option&gt;
+  &lt;option value="uk"&gt;UK&lt;/option&gt;
 &lt;/select&gt;</code></pre>
-      <div class="tip-box"><strong>💡 UX Tip:</strong> Include a placeholder option with `disabled` and `selected` to prompt selection.</div>
-    </section>
-
-    <section class="form-button animated-section">
-      <h3>🔘 Buttons</h3>
-      <pre><code>&lt;button type="submit"&gt;Submit&lt;/button&gt;
-&lt;button type="reset"&gt;Reset Form&lt;/button&gt;</code></pre>
-      <p><strong>Tip:</strong> Use `type="reset"` only if you want users to clear the form easily.</p>
     </section>
 
     <section class="example-form animated-section">
-      <h3>🧪 Example: Feedback Form</h3>
+      <h3>🧪 Feedback Form Example</h3>
       <pre><code>&lt;form action="/submit" method="post"&gt;
   &lt;label for="email"&gt;Email:&lt;/label&gt;
   &lt;input type="email" id="email" name="email" required /&gt;
 
   &lt;label for="msg"&gt;Message:&lt;/label&gt;
-  &lt;textarea id="msg" name="message" rows="5" required&gt;&lt;/textarea&gt;
+  &lt;textarea id="msg" name="message" rows="5"&gt;&lt;/textarea&gt;
 
   &lt;button type="submit"&gt;Send Feedback&lt;/button&gt;
 &lt;/form&gt;</code></pre>
     </section>
 
-    <section class="lesson-test animated-section">
-      <h3>🧪 Try It Yourself</h3>
-      <a class="next-button" href="../test/index.html">🧪 Open Live Code Tester</a>
-    </section>
-
     <section class="lesson-summary animated-section">
       <h3>📌 Summary</h3>
       <ul>
-        <li>Use `<form>` to wrap inputs together</li>
-        <li>Always include `<label>` linked with `for` → `id`</li>
-        <li>Use appropriate types (`email`, `password`, `checkbox`, `radio`)</li>
-        <li>Use `<textarea>` for paragraphs, `<select>` for dropdowns</li>
+        <li>Wrap everything in <code>&lt;form&gt;</code></li>
+        <li>Always use <code>&lt;label&gt;</code> + <code>for</code></li>
+        <li>Explore input types like <code>email</code>, <code>password</code>, <code>radio</code></li>
+        <li>Enhance with <code>textarea</code> and <code>select</code></li>
       </ul>
-      <div class="note-box">
-        <strong>Mini Challenge:</strong> Build a signup form with name, email, password, gender, and favorite programming language options.
-      </div>
     </section>
 
     <section class="lesson-next animated-section">
-      <h3>✅ HTML Section Complete!</h3>
-      <p>You’ve mastered core HTML topics. Next up: CSS—time to style and beautify your pages! 🎨</p>
-      <a class="next-button" href="lesson9.html">➡️ Next Lesson</a>
+      <h3>✅ Up Next</h3>
+      <p>Lesson 9 takes you to the next step: building CSS layouts. Get ready for style power!</p>
+      <a class="next-button" href="lesson9.html">➡️ Lesson 9</a>
       <a class="next-button" href="../index.html">⬅️ Back to Home</a>
     </section>
   </main>
@@ -135,8 +115,9 @@
     <p>&copy; 2025 LearnFrontend.dev | All rights reserved</p>
   </footer>
 
-  <script src="../loader.js"></script>
-  <script src="../theme-toggle.js"></script>
-  <script src="../transitions.js"></script>
+  <script src="../loader.js" defer></script>
+  <script src="../theme-toggle.js" defer></script>
+  <script src="../transitions.js" defer></script>
 </body>
+
 </html>
